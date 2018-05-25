@@ -1,6 +1,8 @@
 ## 微信榜单
 + 2018年5月21日
     + API初始化
++ 2018年5月25日
+    + 添加展示详情接口
 
 + Data
     + Topics - 文章表
@@ -182,6 +184,17 @@
             }
           ]
         } 
+
+### 文章详情 (GET) [/topics/show/{id}] 
++ Response 200 (application/json)
+
+        {
+          "data": {
+            "origin": "http://mp.weixin.qq.com/s?__biz=MjM5MzY4NTMwNA==&mid=2650593928&idx=1&sn=3312eb0f25c805ea2f35eaf9a6f678c4&chksm=be9b30df89ecb9c99109e0123a544018d12c514dbc339ce8d453cb8e578cbc39879dae39df31&scene=27#wechat_redirect&seedId=126&groupSign=1524818221537&top=1&original=100",
+            "articleTopicId": 997313
+          }
+        }
+
 
 ### 公众号榜单 [GET] wxrank?filer[type]=0&filter[startDate]=20180506&sort=-starIndex&page[number]=1&page[size]=50
 + Description
