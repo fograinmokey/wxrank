@@ -51,6 +51,7 @@
     + wechatId (String) - 微信号wechat_id
     + funcIntro (String) - 功能介绍
     + biz (String) - 公众号唯一识别符（唯一）
+	+ logo (String) - 公众号logo
     + accountType (int) - 订阅号0   服务号1
     + accountSubject (int) - 企业和个人
     + companyName (String) - 企业全称
@@ -81,6 +82,7 @@
     + wechatId 必填
     + funcIntro
     + biz
+	+ logo
     + accountType
     + accountSubject
     + companyName
@@ -124,6 +126,7 @@
     + wechatId 必填
     + funcIntro
     + biz
+	+ logo
     + accountType
     + accountSubject
     + companyName
@@ -328,4 +331,3 @@
         }
     }
 
- 
