@@ -196,12 +196,13 @@
         }
 
 
-### 公众号榜单 [GET] wxrank?filer[type]=0&filter[startDate]=20180506&sort=-starIndex&page[number]=1&page[size]=50
+### 公众号榜单 [GET] wxrank?filer[type]=0&filter[startDate]=20180506&filter[starIndex:gt]=0&sort=-starIndex&page[number]=1&page[size]=50
 + Description
     + [MUST] 获取50条以上的数据时需要登录
 + Parameters
     + filter[type] 类型，0：日榜 1:周榜 2：月榜
     + filter[startDate] 开始日期，格式yyyymmdd:20180521
+    + filter[starIndex:gt] 必填0
     
 + Response 200 (application/json)
 
