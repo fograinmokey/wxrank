@@ -107,6 +107,8 @@
     + filter[type] 主题类型(0：图文，1：视频，2：音频，3：音视频混合)
     + filter[original] 是否原创 0：否，1：是
     + filter[minReviews] 最低浏览量
+    + filter[seedId] 公众号标识
+    + filter[orderBy] 排序，默认：点击量，1：点赞量，2：发布时间
 + Response 200 (application/json)
     
        {
