@@ -1,6 +1,12 @@
 + 2018年5月24日
     + API初始化
 
++ 2018年6月26日
+    + 修改公众号结构，包括以下几点
+    	+ 添加qrCode字段
+    	+ 修改region字段为regionId
+    	+ 修改classfy字段为categoryId
+
 ## 文件上传
 ### 获取上传文件验证 (GET) [/upload] (本接口是support服务提供的，所以完整url为/support/upload)
 + Data
@@ -51,7 +57,8 @@
     + wechatId (String) - 微信号wechat_id
     + funcIntro (String) - 功能介绍
     + biz (String) - 公众号唯一识别符（唯一）
-	+ logo (String) - 公众号logo
+    + logo (String) - 公众号logo
+    + qrCode (String) - 二维码
     + accountType (int) - 订阅号0   服务号1
     + accountSubject (int) - 企业和个人
     + companyName (String) - 企业全称
@@ -61,8 +68,8 @@
     + businessScope (String) - 经营范围
     + establishDate (date) - 企业成立日期
     + operatingPeriod (date) - 企业经营期限
-    + region (String) - 地区
-    + classify (String) - 分类
+    + regionId (long) - 地区
+    + categoryId (long) - 分类
     + description (String) - 描述
     + updateRate (int) - 更新频率
     + language (int) - 0中文  1英文
@@ -82,7 +89,8 @@
     + wechatId 必填
     + funcIntro
     + biz
-	+ logo
+    + logo
+    + qrCode
     + accountType
     + accountSubject
     + companyName
@@ -92,12 +100,11 @@
     + businessScope
     + establishDate
     + operatingPeriod
-    + region
-    + classify
+    + regionId
+    + categoryId
     + description
     + updateRate
     + language
-    + enabled
 + Request（application/json）
 
         {
@@ -126,7 +133,8 @@
     + wechatId 必填
     + funcIntro
     + biz
-	+ logo
+    + logo
+    + qrCode
     + accountType
     + accountSubject
     + companyName
@@ -136,12 +144,11 @@
     + businessScope
     + establishDate
     + operatingPeriod
-    + region
-    + classify
+    + regionId
+    + categoryId
     + description
     + updateRate
     + language
-    + enabled
        
 + 修改Request 200（application/json）
 
@@ -331,3 +338,36 @@
         }
     }
 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
