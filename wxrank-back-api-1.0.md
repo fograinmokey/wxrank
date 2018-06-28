@@ -6,6 +6,9 @@
     	+ 添加qrCode字段
     	+ 修改region字段为regionId
     	+ 修改classfy字段为categoryId
++ 2018年6月28日
+    + 添加地区管理接口
+    + 添加分类管理接口
 
 ## 文件上传
 ### 获取上传文件验证 (GET) [/upload] (本接口是support服务提供的，所以完整url为/support/upload)
@@ -337,37 +340,362 @@
             "seedTitle": "艾维音响网"
         }
     }
+  
+## 地区后台管理
++ Data
+    + id (Long) - ID
+    + parentId (Long) - 父节点
+    + title (String) - 区域名称
+    + leaf (int) - 是否叶子节点 0：否，1：是
+    + enabled (int) - 是否可用 
+    + creator (Long) - 创建人
+    + modifier (Long) - 修改人
+    + created (date) - 创建时间
+    + modified (date) - 修改时间
+  
+### 增加 [POST] /wxRegions 
++ Description
+    + [MUST] authenticated
+    + [MUST] ROLE_ADMIN
++ Parameters
+    + title 必填
+    + parentId 必填
 
++ Request (application/json)
+    
+        {
+             "data":{
+             	 "parentId":0,
+                "title":"测试省"
+              }
+         }
+
++ Response 200 (application/json)
+
+        {
+            "data": {
+                "id": 431,
+                "type": "wxRegions"
+            }
+        }
+
+### 修改 [PATCH] /wxRegions/{id}
++ Description
+    + [MUST] authenticated
+    + [MUST] ROLE_ADMIN
++ Parameters
+    + title 必填
+    + parentId 必填
+
++ Request (application/json)
+           
+        {
+            "data":{
+            "title":"测试xx省"
+            }
+        }
+
++ Response 200
+
+### 列表 [GET] /wxRegions?filter[parentId]=5
+
++ Parameters
+    +  filter[parentId]
+
++ Response 200 (application/json)
+    
+        {
+        "meta": {
+            "totalPages": 2,
+            "totalElements": 11,
+            "size": 10,
+            "number": 1,
+            "numberOfElements": 10,
+            "first": true,
+            "last": false,
+            "sort": null
+        },
+        "links": {
+            "self": "/wxRegions?filter[parentId]=97&page[number]=1&page[size]=10",
+            "first": "/wxRegions?filter[parentId]=97&page[number]=1&page[size]=10",
+            "next": "/wxRegions?filter[parentId]=97&page[number]=2&page[size]=10",
+            "last": "/wxRegions?filter[parentId]=97&page[number]=2&page[size]=10"
+        },
+        "data": [
+            {
+                "id": 98,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2018-06-08 13:49:24",
+                "modified": "2018-06-08 13:49:24",
+                "parentId": 97,
+                "title": "杭州市",
+                "leaf": 1
+            },
+            {
+                "id": 99,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2018-06-08 13:49:24",
+                "modified": "2018-06-08 13:49:24",
+                "parentId": 97,
+                "title": "宁波市",
+                "leaf": 1
+            },
+            {
+                "id": 100,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2018-06-08 13:49:24",
+                "modified": "2018-06-08 13:49:24",
+                "parentId": 97,
+                "title": "温州市",
+                "leaf": 1
+            },
+            {
+                "id": 101,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2018-06-08 13:49:24",
+                "modified": "2018-06-08 13:49:24",
+                "parentId": 97,
+                "title": "嘉兴市",
+                "leaf": 1
+            },
+            {
+                "id": 102,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2018-06-08 13:49:24",
+                "modified": "2018-06-08 13:49:24",
+                "parentId": 97,
+                "title": "湖州市",
+                "leaf": 1
+            },
+            {
+                "id": 103,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2018-06-08 13:49:24",
+                "modified": "2018-06-08 13:49:24",
+                "parentId": 97,
+                "title": "绍兴市",
+                "leaf": 1
+            },
+            {
+                "id": 104,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2018-06-08 13:49:24",
+                "modified": "2018-06-08 13:49:24",
+                "parentId": 97,
+                "title": "金华市",
+                "leaf": 1
+            },
+            {
+                "id": 105,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2018-06-08 13:49:24",
+                "modified": "2018-06-08 13:49:24",
+                "parentId": 97,
+                "title": "衢州市",
+                "leaf": 1
+            },
+            {
+                "id": 106,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2018-06-08 13:49:25",
+                "modified": "2018-06-08 13:49:25",
+                "parentId": 97,
+                "title": "舟山市",
+                "leaf": 1
+            },
+            {
+                "id": 107,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2018-06-08 13:49:25",
+                "modified": "2018-06-08 13:49:25",
+                "parentId": 97,
+                "title": "台州市",
+                "leaf": 1
+            }
+        ]
+    }
+
+
+### 查询地区详情 [GET] /wxRegions/{id}
++ Parameters
+    + id 必填
+
++ Response 200 (application/json)
        
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
+       {
+        "data": {
+            "id": 68,
+            "enabled": 1,
+            "creator": 0,
+            "modifier": 0,
+            "created": "2018-06-08 13:49:24",
+            "modified": "2018-06-08 13:49:24",
+            "parentId": 67,
+            "title": "哈尔滨市",
+            "leaf": 1
+        }
+    }
+
+
+
+### 删除 [DELETE] /wxRegions/{id}
++ Description
+    + [MUST] authenticated
+    + [MUST] ROLE_ADMIN
++ Response 204
+
+## 分类后台管理
++ Data
+  + id (Long) - ID
+  + title (String) - 公众号分类名
+  + description (String) - 分类描述
+  + enabled (int) - 是否可用 
+  + creator (Long) - 创建人
+  + modifier (Long) - 修改人
+  + created (date)  - 创建时间
+  + modified (date) - 修改时间
+
+### 增加 [POST] /wxCategories
++ Description
+    + [MUST] Authenticated
+    + [MUST] ROLE_ADMIN
++ Parameters
+    + title 必填
+    + description 必填
++ Request (application/json)
+   
+        {
+        	"data":{
+        		"title":"不一样的类",
+        		"description":"描述同样的事"
+        	}
+       }
+
++ Response 200 (application/json)
+
+    {
+    "data": {
+        "id": 3,
+        "type": "wxCategories"
+     }
+    }
+  
+### 修改 [PATCH] /wxCategories/{id}
++ Description
++ [MUST] Authenticated
++ [MUST] ROLE_ADMIN
+
++ Parameters
+    + title 必填
+    + description 必填
++ Request (application/json)
+
+        {
+        	"data":{
+        		"title":"不一样的xxx类",
+        		"description":"描述同样的事xxx"
+        	}
+        }
+
++ Response 200
+ 
+### 列表 [GET] /wxCategories
+
++ Response 200 (application/json)
+
+        {
+        "meta": {
+            "totalPages": 1,
+            "totalElements": 3,
+            "size": 10,
+            "number": 1,
+            "numberOfElements": 3,
+            "first": true,
+            "last": true,
+            "sort": null
+        },
+        "links": {
+            "self": "/wxCategories?page[number]=1&page[size]=10",
+            "first": "/wxCategories?page[number]=1&page[size]=10",
+            "last": "/wxCategories?page[number]=1&page[size]=10"
+        },
+        "data": [
+            {
+                "id": 1,
+                "enabled": 0,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2018-06-25 00:00:00",
+                "modified": "2018-06-25 15:38:37",
+                "title": "哈哈哈类",
+                "description": "哈哈描述"
+            },
+            {
+                "id": 2,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2018-06-25 15:37:17",
+                "modified": "2018-06-25 15:37:17",
+                "title": "加油类",
+                "description": "添加描述"
+            },
+            {
+                "id": 3,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2018-06-25 16:48:36",
+                "modified": "2018-06-25 16:50:57",
+                "title": "不一样的xxx类",
+                "description": "描述同样的事xxx"
+            }
+        ]
+    }
+
+### 查询分类详情 [GET] /wxCategories/{id}
++ Parameters
+    + id 必填
+   
++ Response 200 (application/json)     
+           
+         {
+            "data": {
+                "id": 3,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2018-06-25 16:48:36",
+                "modified": "2018-06-25 16:50:57",
+                "title": "不一样的xxx类",
+                "description": "描述同样的事xxx"
+            }
+          }
+
+### 删除 [DELETE] /wxCategories/{id}
+
++ Description
+    + [MUST] Authenticated
+    + [MUST] ROLE_ADMIN
+    
++ Response 200 
