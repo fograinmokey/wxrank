@@ -2,6 +2,15 @@
      + API初始化
 
 ## 微信榜单订阅号
++ Data
+     + maxStarIndex (Double) - 最大米饭星指数
+     + maxRanking (long) - 最大排名
+     + allReviewsUp (String) - 总阅读数变化值
+     + rankingUp (String) - 排名变化值
+     + allPraisesUp (String) - 总点赞数变化值
+     + averageReviewsUp (String) - 平均阅读数变化值
+     + topReviewsUp (String) - 头条阅读数变化值
+     + starIndexUp (String) - 米饭星指数变化值
 ### 查询公众号详情[GET]/wxSeeds/{id}
 + Parameters
     + id  
