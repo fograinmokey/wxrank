@@ -11,6 +11,9 @@
      + averageReviewsUp (String) - 平均阅读数变化值
      + topReviewsUp (String) - 头条阅读数变化值
      + starIndexUp (String) - 米饭星指数变化值
+     + categories (Object) - 公众号分类
+    + regions (Object) -  公众号地区
+    + tags (String) -  公众号标签
 ### 查询公众号详情 (客户端) [GET]/wxSeeds/{id}
 + Parameters
     + id  
