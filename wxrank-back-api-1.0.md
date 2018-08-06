@@ -397,7 +397,7 @@
         }
     }
   
-## 地区后台管理
+## 地区管理
 + Data
     + id (Long) - ID
     + parentId (Long) - 父节点
@@ -622,7 +622,7 @@
     + [MUST] ROLE_ADMIN
 + Response 204
 
-## 分类后台管理
+## 分类管理
 + Data
   + id (Long) - ID
   + title (String) - 公众号分类名
