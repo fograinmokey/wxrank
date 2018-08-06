@@ -192,43 +192,83 @@
 + Response 200 (application/json)       
 
         {
-          "meta": {
-            "totalPages": 1,
-            "totalElements": 1,
-            "size": 5,
+        "meta": {
+            "totalPages": 8,
+            "totalElements": 78,
+            "size": 10,
             "number": 1,
-            "numberOfElements": 1,
+            "numberOfElements": 10,
             "first": true,
-            "last": true,
-            "sort": [
-              {
-                "direction": "DESC",
-                "property": "modified",
-                "ignoreCase": false,
-                "nullHandling": "NATIVE",
-                "descending": true,
-                "ascending": false
-              }
-            ]
-          },
-          "links": {
-            "self": "/wxSeeds?filter[title:like]=%Midifa%&sort=-modified&page[number]=1&page[size]=5",
-            "first": "/wxSeeds?filter[title:like]=%Midifa%&sort=-modified&page[number]=1&page[size]=5",
-            "last": "/wxSeeds?filter[title:like]=%Midifa%&sort=-modified&page[number]=1&page[size]=5"
-          },
-          "data": [
+            "last": false,
+            "sort": null
+        },
+        "links": {
+            "self": "/wxSeeds?page[number]=1&page[size]=10",
+            "first": "/wxSeeds?page[number]=1&page[size]=10",
+            "next": "/wxSeeds?page[number]=2&page[size]=10",
+            "last": "/wxSeeds?page[number]=8&page[size]=10"
+        },
+        "data": [
             {
-              "id": 32,
-              "enabled": 1,
-              "creator": 0,
-              "modifier": 0,
-              "articleSeedId": 157,
-              "title": "Midifan",
-              "wechatId": "",
-              "biz": "MjM5MTA1NjMwMA=="
+                "id": 1,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 1058,
+                "modified": "2018-08-03 09:08:03",
+                "articleSeedId": 125,
+                "title": "AKAI雅佳乐园",
+                "wechatId": "AKAIPro",
+                "biz": "MzIxNzY3MTc0OA==",
+                "logo": "http://static.budee.com/iyyren/image/201802/01/1554/302556114032148480.jpg",
+                "regionId": 11,
+                "categoryId": 9,
+                "categoryTitle": "测试类"
+            },
+            {
+                "id": 2,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 1058,
+                "modified": "2018-06-06 16:45:44",
+                "articleSeedId": 126,
+                "title": "艾维音响网",
+                "wechatId": "av010com",
+                "biz": "MjM5MzY4NTMwNA==",
+                "logo": "http://static.budee.com/iyyren/image/201802/01/1553/302555982347780096.jpg",
+                "regionId": 7,
+                "categoryId": 4,
+                "categoryTitle": "体育"
+            },
+            {
+                "id": 3,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 1058,
+                "modified": "2018-06-11 18:30:11",
+                "articleSeedId": 127,
+                "title": "Allanwang Studio",
+                "wechatId": "gh_7aae95c18635",
+                "biz": "MjM5NjEzMjEzMA==",
+                "logo": "http://static.budee.com/iyyren/image/201802/01/1552/302555646887346176.jpg",
+                "regionId": 8,
+                "categoryId": 0
+            },
+            {
+                "id": 10,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 1058,
+                "modified": "2018-07-04 15:27:15",
+                "articleSeedId": 134,
+                "title": "FunsMusicStudio",
+                "wechatId": "Funs_Music_Studio",
+                "biz": "MzU0MTA3ODIyOQ==",
+                "logo": "http://static.budee.com/iyyren/image/201802/05/1029/303923843335077888.jpg",
+                "regionId": 0,
+                "categoryId": 0
             }
-          ]
-        }
+        ]
+      }
 
 ### 删除 [DELETE] /wxSeeds/{id}
 + Description
