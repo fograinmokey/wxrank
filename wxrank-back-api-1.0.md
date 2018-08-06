@@ -9,6 +9,8 @@
 + 2018年6月28日
     + 添加地区管理接口
     + 添加分类管理接口
++ 2018年8月3日
+    +  添加公众号管理接口
 
 ## 文件上传
 ### 获取上传文件验证 (GET) [/upload] (本接口是support服务提供的，所以完整url为/support/upload)
@@ -64,6 +66,7 @@
     + qrCode (String) - 二维码
     + accountType (int) - 订阅号0   服务号1
     + accountSubject (int) - 企业和个人
+    + subject (String) - 帐号主体
     + companyName (String) - 企业全称
     + businessRegNo (String) - 工商执照注册号
     + serviceTel (String) - 客服电话
@@ -103,7 +106,7 @@
     + businessScope
     + establishDate
     + operatingPeriod
-    + regionId
+    + regionId 
     + categoryId
     + description
     + updateRate
@@ -111,20 +114,27 @@
 + Request（application/json）
 
         {
-            "data":{
-                "title":"未来无限可能",
-                "wechatId":"feiguohai123"
-            }
+         "data":{
+         		"title":"生活大爆炸",
+        		"wechatId":"yulida",
+        		"regionId":"99",
+        		"categoryId":"10",
+        		"tags":[
+            			"娱乐",
+            			"媒体",
+            			"搞笑"
+            	]
+          }
         }
        
 + Response 201 (application/json)  
 
-        {
-          "data": {
-            "id": 74,
+         {
+        "data": {
+            "id": 124,
             "type": "wxSeeds"
-          }
         }
+     }
        
 ### 修改 [PATCH] /wxSeeds/{id}
 + Description
@@ -156,11 +166,17 @@
 + 修改Request 200（application/json）
 
         {
-            "data":{
-                "title":"我的未来无限可能",
-                "wechatId":"feiguohai123",
-                "biz":"woshiweiyibiaoshifu"
-            }
+         "data":{
+         		"title":"生活大爆炸NO1",
+        		"wechatId":"yulida",
+        		"regionId":"98",
+        		"categoryId":"2",
+        		"tags":[
+            			"生活",
+            			"媒体",
+            			"搞笑"
+            	]
+          }
         }
 +  Response 200       
 
