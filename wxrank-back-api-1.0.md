@@ -403,6 +403,8 @@
     + parentId (Long) - 父节点
     + title (String) - 区域名称
     + leaf (int) - 是否叶子节点 0：否，1：是
+    + quotes (Long) - 公众号引用的次数
+    + displayOrder (Long) - 排序
     + enabled (int) - 是否可用 
     + creator (Long) - 创建人
     + modifier (Long) - 修改人
