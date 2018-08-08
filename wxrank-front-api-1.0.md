@@ -5,6 +5,7 @@
     + 添加展示详情接口
 + 2018年8月8日
     + 更新公众号榜单，添加分类和地区排行
+    + 更新文章榜单，添加分类和地区排行
 
 + Data
     + Topics - 文章表
@@ -101,7 +102,7 @@
           }
         }
 
-### 文章榜单 [GET] /topics/rank?filter[period]=1&page[number]=1&page[size]=5
+### 文章榜单 [GET] /topics/rank?filter[period]=1&filter[regionId]=11&filter[categoryId]=10&page[number]=1&page[size]=5
 
 + Description
     + [MUST] 获取50条以上的数据时需要登录
@@ -112,83 +113,68 @@
     + filter[minReviews] 最低浏览量
     + filter[seedId] 公众号标识
     + filter[orderBy] 排序，默认：点击量，1：点赞量，2：发布时间
+    + filter[regionId] 地区标识
+    + filter[categoryId]=1 分类标识
 + Response 200 (application/json)
     
        {
           "meta": {
-            "totalPages": 4,
-            "totalElements": 16,
-            "size": 5,
+            "totalPages": 1,
+            "totalElements": 3,
+            "size": 20,
             "number": 1,
-            "numberOfElements": 5,
+            "numberOfElements": 3,
             "first": true,
-            "last": false,
+            "last": true,
             "sort": null
           },
           "links": {
-            "self": "/topics/rank?filter[period]=1&page[number]=1&page[size]=5",
-            "first": "/topics/rank?filter[period]=1&page[number]=1&page[size]=5",
-            "next": "/topics/rank?filter[period]=1&page[number]=2&page[size]=5",
-            "last": "/topics/rank?filter[period]=1&page[number]=4&page[size]=5"
+            "self": "/topics/rank?filter[period]=2&filter[categoryId]=10&filter[regionId]=11&page[number]=1&page[size]=20",
+            "first": "/topics/rank?filter[period]=2&filter[categoryId]=10&filter[regionId]=11&page[number]=1&page[size]=20",
+            "last": "/topics/rank?filter[period]=2&filter[categoryId]=10&filter[regionId]=11&page[number]=1&page[size]=20"
           },
           "data": [
             {
-              "id": 8045,
-              "seedId": 52,
+              "id": 16363,
+              "seedId": 43,
               "type": 0,
-              "title": "本周六 影音联盟2018年中国4K超高清、全景声、智能巡展--郑州站",
-              "postDate": "2018-05-14T04:38:48.000+0000",
-              "original": 0,
-              "reviews": 2,
+              "title": "被前员工指控涉嫌窃密并索赔1.05亿美元 华为回应称毫无依据",
+              "postDate": "2018-07-16T04:15:00.000+0000",
+              "original": 1,
+              "reviews": 1,
               "thumbsUp": 0,
-              "seedTitle": "HiFi秀网"
+              "seedTitle": "声学在线",
+              "seedLogo": "//static.mifanxing.com/iyyren/image/201803/15/1507/317764521857007616.jpg",
+              "openUpdate": 0
             },
             {
-              "id": 8046,
-              "seedId": 52,
+              "id": 16364,
+              "seedId": 43,
               "type": 0,
-              "title": "注意查收 HIFI秀会员活动福利：经典音乐剧《洗衣服》",
-              "postDate": "2018-05-13T21:45:05.000+0000",
-              "original": 0,
-              "reviews": 0,
+              "title": "Google play下载量是App Store2.4倍，收入却只有1/2，这是为什么？",
+              "postDate": "2018-07-17T04:26:29.000+0000",
+              "original": 1,
+              "reviews": 1,
               "thumbsUp": 0,
-              "seedTitle": "HiFi秀网"
+              "seedTitle": "声学在线",
+              "seedLogo": "//static.mifanxing.com/iyyren/image/201803/15/1507/317764521857007616.jpg",
+              "openUpdate": 0
             },
             {
-              "id": 8048,
-              "seedId": 52,
-              "type": 1,
-              "title": "中国传统乐器Top10",
-              "postDate": "2018-05-14T07:03:23.000+0000",
-              "original": 0,
-              "reviews": 0,
-              "thumbsUp": 0,
-              "seedTitle": "HiFi秀网"
-            },
-            {
-              "id": 10537,
-              "seedId": 26,
+              "id": 16365,
+              "seedId": 43,
               "type": 0,
-              "title": "Randon蓝盾吉他提供2018吉他中国木吉他大赛奖品",
-              "postDate": "2018-05-13T16:35:02.000+0000",
-              "original": 0,
-              "reviews": 0,
+              "title": "暴雨来得让人措不及防，别怕！人工智能预测在路上",
+              "postDate": "2018-07-16T04:15:00.000+0000",
+              "original": 1,
+              "reviews": 1,
               "thumbsUp": 0,
-              "seedTitle": "吉他中国"
-            },
-            {
-              "id": 10538,
-              "seedId": 26,
-              "type": 0,
-              "title": "进军国际！民族品牌音乐驿站系列琴包征服美国专业杂志",
-              "postDate": "2018-05-14T07:53:36.000+0000",
-              "original": 0,
-              "reviews": 0,
-              "thumbsUp": 0,
-              "seedTitle": "吉他中国"
+              "seedTitle": "声学在线",
+              "seedLogo": "//static.mifanxing.com/iyyren/image/201803/15/1507/317764521857007616.jpg",
+              "openUpdate": 0
             }
           ]
-        } 
+        }
 
 ### 文章详情 (GET) [/topics/show/{id}] 
 + Response 200 (application/json)
