@@ -3,6 +3,8 @@
     + API初始化
 + 2018年5月25日
     + 添加展示详情接口
++ 2018年8月8日
+    + 更新公众号榜单，添加分类和地区排行
 
 + Data
     + Topics - 文章表
@@ -199,180 +201,80 @@
         }
 
 
-### 公众号榜单 [GET] wxrank?filer[type]=0&filter[startDate]=20180506&sort=-starIndex,-id&page[number]=1&page[size]=50
+### 公众号榜单 [GET] wxrank?filter[startDate]=20180625&filter[type]=0&filter[regionId]=11&filter[categoryId]=10&page[number]=1&page[size]=50
 + Description
     + [MUST] 获取50条以上的数据时需要登录
 + Parameters
     + filter[type] 类型，0：日榜 1:周榜 2：月榜
     + filter[startDate] 开始日期，格式yyyymmdd:20180521
-    + sort=-starIndex,-id
+    + filter[categoryId] 分类标识
+    + filter[regionId] 地区标识
     
 + Response 200 (application/json)
 
-       {
-        "meta": {
-            "totalPages": 13,
-            "totalElements": 64,
-            "size": 5,
+        {
+          "meta": {
+            "totalPages": 1,
+            "totalElements": 2,
+            "size": 20,
             "number": 1,
-            "numberOfElements": 5,
+            "numberOfElements": 2,
             "first": true,
-            "last": false,
+            "last": true,
             "sort": [
-                {
-                    "direction": "DESC",
-                    "property": "star_index",
-                    "ignoreCase": false,
-                    "nullHandling": "NATIVE",
-                    "ascending": false,
-                    "descending": true
-                },
-                {
-                    "direction": "DESC",
-                    "property": "id",
-                    "ignoreCase": false,
-                    "nullHandling": "NATIVE",
-                    "ascending": false,
-                    "descending": true
-                }
+              {
+                "direction": "DESC",
+                "property": "rank.star_index",
+                "ignoreCase": false,
+                "nullHandling": "NATIVE",
+                "descending": true,
+                "ascending": false
+              },
+              {
+                "direction": "DESC",
+                "property": "rank.id",
+                "ignoreCase": false,
+                "nullHandling": "NATIVE",
+                "descending": true,
+                "ascending": false
+              }
             ]
-        },
-        "links": {
-            "self": "/wxrank?filer[type]=0&filter[startDate]=20180506&sort=-starIndex,-id&page[number]=1&page[size]=5",
-            "first": "/wxrank?filer[type]=0&filter[startDate]=20180506&sort=-starIndex,-id&page[number]=1&page[size]=5",
-            "next": "/wxrank?filer[type]=0&filter[startDate]=20180506&sort=-starIndex,-id&page[number]=2&page[size]=5",
-            "last": "/wxrank?filer[type]=0&filter[startDate]=20180506&sort=-starIndex,-id&page[number]=13&page[size]=5"
-        },
-        "data": [
+          },
+          "links": {
+            "self": "/wxrank?filter[startDate]=20180625&filter[type]=0&filter[categoryId]=10&filter[regionId]=11&page[number]=1&page[size]=20",
+            "first": "/wxrank?filter[startDate]=20180625&filter[type]=0&filter[categoryId]=10&filter[regionId]=11&page[number]=1&page[size]=20",
+            "last": "/wxrank?filter[startDate]=20180625&filter[type]=0&filter[categoryId]=10&filter[regionId]=11&page[number]=1&page[size]=20"
+          },
+          "data": [
             {
-                "id": 1326,
-                "enabled": 1,
-                "creator": 0,
-                "modifier": 0,
-                "created": "2018-05-31 15:00:33",
-                "modified": "2018-05-31 15:00:33",
-                "type": 0,
-                "seedId": 11,
-                "startDate": 20180506,
-                "endDate": 20180506,
-                "postNum": 1,
-                "topicNum": 8,
-                "allReviews": 157145,
-                "topReviews": 40293,
-                "maxReviews": 40293,
-                "allPraises": 129,
-                "topPraises": 93,
-                "maxPraises": 93,
-                "starIndex": 998.24,
-                "ranking": 1,
-                "averageReviews": 19644,
-                "seedTitle": "伽柏传媒",
-                "wechatId": "jiabaichuanmei",
-                "seedLogo": "http://static.budee.com/iyyren/image/201802/07/0957/304640556708020224.jpg"
+              "seedId": 4,
+              "postNum": 1,
+              "topicNum": 1,
+              "allReviews": 1667,
+              "topReviews": 1667,
+              "maxReviews": 1667,
+              "allPraises": 11,
+              "starIndex": 491.81,
+              "ranking": 1,
+              "averageReviews": 1667,
+              "seedTitle": "拨片破坏狂吉他电吉他教学",
+              "wechatId": "licklibrary",
+              "seedLogo": "//static.mifanxing.com/iyyren/image/201802/01/1556/302556684851757056.jpg"
             },
             {
-                "id": 1328,
-                "enabled": 1,
-                "creator": 0,
-                "modifier": 0,
-                "created": "2018-05-31 15:00:33",
-                "modified": "2018-05-31 15:00:33",
-                "type": 1,
-                "seedId": 11,
-                "startDate": 20180506,
-                "endDate": 20180512,
-                "postNum": 7,
-                "topicNum": 56,
-                "allReviews": 910539,
-                "topReviews": 156447,
-                "maxReviews": 40293,
-                "allPraises": 295,
-                "topPraises": 142,
-                "maxPraises": 93,
-                "starIndex": 920.89,
-                "ranking": 2,
-                "averageReviews": 16260,
-                "seedTitle": "伽柏传媒",
-                "wechatId": "jiabaichuanmei",
-                "seedLogo": "http://static.budee.com/iyyren/image/201802/07/0957/304640556708020224.jpg"
-            },
-            {
-                "id": 3376,
-                "enabled": 1,
-                "creator": 0,
-                "modifier": 0,
-                "created": "2018-05-31 15:05:07",
-                "modified": "2018-05-31 15:05:07",
-                "type": 1,
-                "seedId": 30,
-                "startDate": 20180506,
-                "endDate": 20180512,
-                "postNum": 6,
-                "topicNum": 25,
-                "allReviews": 135533,
-                "topReviews": 54461,
-                "maxReviews": 51999,
-                "allPraises": 802,
-                "topPraises": 454,
-                "maxPraises": 235,
-                "starIndex": 777.54,
-                "ranking": 3,
-                "averageReviews": 5422,
-                "seedTitle": "摩登天空",
-                "wechatId": "modernsky19971227",
-                "seedLogo": "http://static.budee.com/iyyren/image/201803/08/1024/315156776297316352.jpg"
-            },
-            {
-                "id": 2684,
-                "enabled": 1,
-                "creator": 0,
-                "modifier": 0,
-                "created": "2018-05-31 15:03:44",
-                "modified": "2018-05-31 15:03:44",
-                "type": 0,
-                "seedId": 25,
-                "startDate": 20180506,
-                "endDate": 20180506,
-                "postNum": 1,
-                "topicNum": 2,
-                "allReviews": 9079,
-                "topReviews": 7722,
-                "maxReviews": 7722,
-                "allPraises": 84,
-                "topPraises": 73,
-                "maxPraises": 73,
-                "starIndex": 709.68,
-                "ranking": 4,
-                "averageReviews": 4540,
-                "seedTitle": "吉他联盟",
-                "wechatId": "guitartogether",
-                "seedLogo": "http://static.budee.com/iyyren/image/201803/15/1512/317765826600124416.jpg"
-            },
-            {
-                "id": 2686,
-                "enabled": 1,
-                "creator": 0,
-                "modifier": 0,
-                "created": "2018-05-31 15:03:44",
-                "modified": "2018-05-31 15:03:44",
-                "type": 1,
-                "seedId": 25,
-                "startDate": 20180506,
-                "endDate": 20180512,
-                "postNum": 7,
-                "topicNum": 14,
-                "allReviews": 40070,
-                "topReviews": 31065,
-                "maxReviews": 8143,
-                "allPraises": 294,
-                "topPraises": 258,
-                "maxPraises": 73,
-                "starIndex": 634.15,
-                "ranking": 5,
-                "averageReviews": 2863,
-                "seedTitle": "吉他联盟",
-                "wechatId": "guitartogether",
-                "seedLogo": "http://static.budee.com/iyyren/image/201803/15/1512/317765826600124416.jpg"
+              "seedId": 1,
+              "postNum": 1,
+              "topicNum": 1,
+              "allReviews": 151,
+              "topReviews": 151,
+              "maxReviews": 151,
+              "allPraises": 3,
+              "starIndex": 229,
+              "ranking": 2,
+              "averageReviews": 151,
+              "seedTitle": "AKAI雅佳乐园",
+              "wechatId": "AKAIPro",
+              "seedLogo": "//static.mifanxing.com/iyyren/image/201802/01/1554/302556114032148480.jpg"
             }
-        ]
-      }
+          ]
+        }
