@@ -464,8 +464,8 @@
     
         {
         "meta": {
-            "totalPages": 2,
-            "totalElements": 11,
+            "totalPages": 43,
+            "totalElements": 423,
             "size": 10,
             "number": 1,
             "numberOfElements": 10,
@@ -474,125 +474,221 @@
             "sort": null
         },
         "links": {
-            "self": "/wxRegions?filter[parentId]=97&page[number]=1&page[size]=10",
-            "first": "/wxRegions?filter[parentId]=97&page[number]=1&page[size]=10",
-            "next": "/wxRegions?filter[parentId]=97&page[number]=2&page[size]=10",
-            "last": "/wxRegions?filter[parentId]=97&page[number]=2&page[size]=10"
+            "self": "/wxRegions?page[number]=1&page[size]=10",
+            "first": "/wxRegions?page[number]=1&page[size]=10",
+            "next": "/wxRegions?page[number]=2&page[size]=10",
+            "last": "/wxRegions?page[number]=43&page[size]=10"
         },
         "data": [
             {
-                "id": 98,
+                "id": 1,
                 "enabled": 1,
                 "creator": 0,
                 "modifier": 0,
-                "created": "2018-06-08 13:49:24",
-                "modified": "2018-06-08 13:49:24",
-                "parentId": 97,
-                "title": "杭州市",
-                "leaf": 1
+                "created": "2018-06-08 13:49:22",
+                "modified": "2018-08-06 16:20:20",
+                "parentId": 0,
+                "title": "北京市",
+                "leaf": 0,
+                "quotes": 2,
+                "displayOrder": 0,
+                "children": [
+                    [
+                        {
+                            "id": 2,
+                            "parentId": 1,
+                            "title": "北京市"
+                        }
+                    ]
+                ]
             },
             {
-                "id": 99,
+                "id": 2,
                 "enabled": 1,
                 "creator": 0,
                 "modifier": 0,
-                "created": "2018-06-08 13:49:24",
-                "modified": "2018-06-08 13:49:24",
-                "parentId": 97,
-                "title": "宁波市",
-                "leaf": 1
+                "created": "2018-06-08 13:49:23",
+                "modified": "2018-08-06 16:20:20",
+                "parentId": 1,
+                "title": "北京市",
+                "leaf": 1,
+                "quotes": 1,
+                "displayOrder": 0
             },
             {
-                "id": 100,
+                "id": 3,
                 "enabled": 1,
                 "creator": 0,
                 "modifier": 0,
-                "created": "2018-06-08 13:49:24",
-                "modified": "2018-06-08 13:49:24",
-                "parentId": 97,
-                "title": "温州市",
-                "leaf": 1
+                "created": "2018-06-08 13:49:23",
+                "modified": "2018-06-08 13:49:23",
+                "parentId": 0,
+                "title": "天津市",
+                "leaf": 0,
+                "quotes": 0,
+                "displayOrder": 0,
+                "children": [
+                    [
+                        {
+                            "id": 4,
+                            "parentId": 3,
+                            "title": "天津市"
+                        }
+                    ]
+                ]
             },
             {
-                "id": 101,
+                "id": 4,
                 "enabled": 1,
                 "creator": 0,
                 "modifier": 0,
-                "created": "2018-06-08 13:49:24",
-                "modified": "2018-06-08 13:49:24",
-                "parentId": 97,
-                "title": "嘉兴市",
-                "leaf": 1
+                "created": "2018-06-08 13:49:23",
+                "modified": "2018-06-08 13:49:23",
+                "parentId": 3,
+                "title": "天津市",
+                "leaf": 1,
+                "quotes": 0,
+                "displayOrder": 0
             },
             {
-                "id": 102,
+                "id": 5,
                 "enabled": 1,
                 "creator": 0,
                 "modifier": 0,
-                "created": "2018-06-08 13:49:24",
-                "modified": "2018-06-08 13:49:24",
-                "parentId": 97,
-                "title": "湖州市",
-                "leaf": 1
+                "created": "2018-06-08 13:49:23",
+                "modified": "2018-08-09 02:00:00",
+                "parentId": 0,
+                "title": "河北省",
+                "leaf": 0,
+                "quotes": 4,
+                "displayOrder": 0,
+                "children": [
+                    [
+                        {
+                            "id": 6,
+                            "parentId": 5,
+                            "title": "石家庄市"
+                        },
+                        {
+                            "id": 7,
+                            "parentId": 5,
+                            "title": "唐山市"
+                        },
+                        {
+                            "id": 8,
+                            "parentId": 5,
+                            "title": "秦皇岛市"
+                        },
+                        {
+                            "id": 9,
+                            "parentId": 5,
+                            "title": "邯郸市"
+                        },
+                        {
+                            "id": 10,
+                            "parentId": 5,
+                            "title": "邢台市"
+                        },
+                        {
+                            "id": 11,
+                            "parentId": 5,
+                            "title": "保定市"
+                        },
+                        {
+                            "id": 12,
+                            "parentId": 5,
+                            "title": "张家口市"
+                        },
+                        {
+                            "id": 13,
+                            "parentId": 5,
+                            "title": "承德市"
+                        },
+                        {
+                            "id": 14,
+                            "parentId": 5,
+                            "title": "沧州市"
+                        },
+                        {
+                            "id": 15,
+                            "parentId": 5,
+                            "title": "廊坊市"
+                        },
+                        {
+                            "id": 16,
+                            "parentId": 5,
+                            "title": "衡水市"
+                        }
+                    ]
+                ]
             },
             {
-                "id": 103,
+                "id": 6,
                 "enabled": 1,
                 "creator": 0,
                 "modifier": 0,
-                "created": "2018-06-08 13:49:24",
-                "modified": "2018-06-08 13:49:24",
-                "parentId": 97,
-                "title": "绍兴市",
-                "leaf": 1
+                "created": "2018-06-08 13:49:23",
+                "modified": "2018-06-08 13:49:23",
+                "parentId": 5,
+                "title": "石家庄市",
+                "leaf": 1,
+                "quotes": 0,
+                "displayOrder": 0
             },
             {
-                "id": 104,
+                "id": 7,
                 "enabled": 1,
                 "creator": 0,
                 "modifier": 0,
-                "created": "2018-06-08 13:49:24",
-                "modified": "2018-06-08 13:49:24",
-                "parentId": 97,
-                "title": "金华市",
-                "leaf": 1
+                "created": "2018-06-08 13:49:23",
+                "modified": "2018-08-06 16:20:20",
+                "parentId": 5,
+                "title": "唐山市",
+                "leaf": 1,
+                "quotes": 1,
+                "displayOrder": 0
             },
             {
-                "id": 105,
+                "id": 8,
                 "enabled": 1,
                 "creator": 0,
                 "modifier": 0,
-                "created": "2018-06-08 13:49:24",
-                "modified": "2018-06-08 13:49:24",
-                "parentId": 97,
-                "title": "衢州市",
-                "leaf": 1
+                "created": "2018-06-08 13:49:23",
+                "modified": "2018-08-06 16:20:20",
+                "parentId": 5,
+                "title": "秦皇岛市",
+                "leaf": 1,
+                "quotes": 2,
+                "displayOrder": 0
             },
             {
-                "id": 106,
+                "id": 9,
                 "enabled": 1,
                 "creator": 0,
                 "modifier": 0,
-                "created": "2018-06-08 13:49:25",
-                "modified": "2018-06-08 13:49:25",
-                "parentId": 97,
-                "title": "舟山市",
-                "leaf": 1
+                "created": "2018-06-08 13:49:23",
+                "modified": "2018-06-08 13:49:23",
+                "parentId": 5,
+                "title": "邯郸市",
+                "leaf": 1,
+                "quotes": 0,
+                "displayOrder": 0
             },
             {
-                "id": 107,
+                "id": 10,
                 "enabled": 1,
                 "creator": 0,
                 "modifier": 0,
-                "created": "2018-06-08 13:49:25",
-                "modified": "2018-06-08 13:49:25",
-                "parentId": 97,
-                "title": "台州市",
-                "leaf": 1
+                "created": "2018-06-08 13:49:23",
+                "modified": "2018-06-08 13:49:23",
+                "parentId": 5,
+                "title": "邢台市",
+                "leaf": 1,
+                "quotes": 0,
+                "displayOrder": 0
             }
         ]
     }
-
 
 ### 查询地区详情 [GET] /wxRegions/{id}
 + Parameters
