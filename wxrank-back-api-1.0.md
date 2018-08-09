@@ -443,7 +443,7 @@
     + [MUST] ROLE_ADMIN
 + Parameters
     + title 必填
-    + parentId 必填
+    + parentId 
 
 + Request (application/json)
            
