@@ -106,6 +106,7 @@
 
 + Description
     + [MUST] 获取50条以上的数据时需要登录
+    + [MUST] 用户登录后只能获取100条数据
 + Parameters
     + filter[period] 时间，0：一天 1：一周 2：一个月
     + filter[type] 主题类型(0：图文，1：视频，2：音频，3：音视频混合)
@@ -238,6 +239,7 @@
 ### 公众号榜单 [GET] wxrank?filter[startDate]=20180625&filter[type]=0&filter[regionId]=11&filter[categoryId]=10&page[number]=1&page[size]=50
 + Description
     + [MUST] 获取50条以上的数据时需要登录
+    + [MUST] 用户登录后只能获取100条数据
 + Parameters
     + filter[type] 类型，0：日榜 1:周榜 2：月榜
     + filter[startDate] 开始日期，格式yyyymmdd:20180521
