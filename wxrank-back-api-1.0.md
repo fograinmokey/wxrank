@@ -724,6 +724,8 @@
   + id (Long) - ID
   + title (String) - 公众号分类名
   + description (String) - 分类描述
+  + quotes (Long) - 公众号引用次数
+  + display_order (Long) - 排序
   + enabled (int) - 是否可用 
   + creator (Long) - 创建人
   + modifier (Long) - 修改人
