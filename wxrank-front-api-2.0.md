@@ -191,7 +191,7 @@
      + modifier (Long) - 修改人
      + created  (date) - 创建时间
      + modified (date) - 修改时间
-### 列表 (客户端) [GET] wxTags?sort=-quotes
+### 列表 (客户端) [GET] /wxTags?sort=-quotes
     
 + Parameters
      + quotes 公众号引用次数/公众号的个数
