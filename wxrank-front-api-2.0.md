@@ -1,4 +1,5 @@
 + 2018年7月2日
+     + 添加标签列表
      + API初始化
 
 ## 微信榜单订阅号
@@ -178,3 +179,118 @@
             ]
         }
       }
+     
+### 列表 [GET] wxTags?filter[quotes:gt]=0&sort=-quotes
+    
++ Parameters
+     + quotes 公众号引用次数/公众号的个数
+     + sort -quotes(引用次数由多到少) 
++ Request (application/json)
+
+        {
+            "meta": {
+                "totalPages": 1,
+                "totalElements": 7,
+                "size": 10,
+                "number": 1,
+                "numberOfElements": 7,
+                "first": true,
+                "last": true,
+                "sort": [
+                    {
+                        "direction": "DESC",
+                        "property": "quotes",
+                        "ignoreCase": false,
+                        "nullHandling": "NATIVE",
+                        "ascending": false,
+                        "descending": true
+                    }
+                ]
+            },
+            "links": {
+                "self": "/wxTags?sort=-quotes&filter[quotes:gt]=0&page[number]=1&page[size]=10",
+                "first": "/wxTags?sort=-quotes&filter[quotes:gt]=0&page[number]=1&page[size]=10",
+                "last": "/wxTags?sort=-quotes&filter[quotes:gt]=0&page[number]=1&page[size]=10"
+            },
+            "data": [
+                {
+                    "id": 130,
+                    "enabled": 1,
+                    "creator": 0,
+                    "modifier": 0,
+                    "created": "2018-08-27 19:19:30",
+                    "modified": "2018-08-27 19:42:20",
+                    "title": "修改标签",
+                    "quotes": 20,
+                    "displayOrder": 0
+                },
+                {
+                    "id": 49,
+                    "enabled": 1,
+                    "creator": 0,
+                    "modifier": 0,
+                    "created": "2018-08-22 17:44:21",
+                    "modified": "2018-08-22 17:44:21",
+                    "title": "娱乐",
+                    "quotes": 9,
+                    "displayOrder": 0
+                },
+                {
+                    "id": 76,
+                    "enabled": 1,
+                    "creator": 0,
+                    "modifier": 0,
+                    "created": "2018-08-22 17:51:42",
+                    "modified": "2018-08-22 17:51:42",
+                    "title": "新鲜",
+                    "quotes": 6,
+                    "displayOrder": 0
+                },
+                {
+                    "id": 39,
+                    "enabled": 1,
+                    "creator": 0,
+                    "modifier": 0,
+                    "created": "2018-08-09 14:15:03",
+                    "modified": "2018-08-09 14:15:03",
+                    "title": "生活",
+                    "quotes": 4,
+                    "displayOrder": 0
+                },
+                {
+                    "id": 18,
+                    "enabled": 1,
+                    "creator": 0,
+                    "modifier": 0,
+                    "created": "2018-08-03 09:08:03",
+                    "modified": "2018-08-03 09:08:03",
+                    "title": "体育",
+                    "quotes": 3,
+                    "displayOrder": 0
+                },
+                {
+                    "id": 15,
+                    "enabled": 1,
+                    "creator": 0,
+                    "modifier": 0,
+                    "created": "2018-08-03 18:59:19",
+                    "modified": "2018-08-03 18:59:19",
+                    "title": "音乐",
+                    "quotes": 1,
+                    "displayOrder": 0
+                },
+                {
+                    "id": 95,
+                    "enabled": 1,
+                    "creator": 0,
+                    "modifier": 0,
+                    "created": "2018-08-23 17:44:30",
+                    "modified": "2018-08-23 17:44:30",
+                    "title": "青春",
+                    "quotes": 1,
+                    "displayOrder": 0
+                }
+            ]
+        }
+
+      
