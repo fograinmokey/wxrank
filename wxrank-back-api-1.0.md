@@ -774,46 +774,104 @@
 
 + Response 200
  
-### 列表 [GET] /wxCategories
-
+### 列表 [GET] /wxCategories?sort=-quotes
++ Parameters
+    + sort -quotes(引用次数由多到少)
 + Response 200 (application/json)
 
         {
         "meta": {
-            "totalPages": 1,
-            "totalElements": 3,
+            "totalPages": 2,
+            "totalElements": 16,
             "size": 10,
             "number": 1,
-            "numberOfElements": 3,
+            "numberOfElements": 10,
             "first": true,
-            "last": true,
-            "sort": null
+            "last": false,
+            "sort": [
+                {
+                    "direction": "DESC",
+                    "property": "quotes",
+                    "ignoreCase": false,
+                    "nullHandling": "NATIVE",
+                    "descending": true,
+                    "ascending": false
+                }
+            ]
         },
         "links": {
-            "self": "/wxCategories?page[number]=1&page[size]=10",
-            "first": "/wxCategories?page[number]=1&page[size]=10",
-            "last": "/wxCategories?page[number]=1&page[size]=10"
+            "self": "/wxCategories?sort=-quotes&page[number]=1&page[size]=10",
+            "first": "/wxCategories?sort=-quotes&page[number]=1&page[size]=10",
+            "next": "/wxCategories?sort=-quotes&page[number]=2&page[size]=10",
+            "last": "/wxCategories?sort=-quotes&page[number]=2&page[size]=10"
         },
         "data": [
             {
-                "id": 1,
-                "enabled": 0,
-                "creator": 0,
-                "modifier": 0,
-                "created": "2018-06-25 00:00:00",
-                "modified": "2018-06-25 15:38:37",
-                "title": "哈哈哈类",
-                "description": "哈哈描述"
-            },
-            {
-                "id": 2,
+                "id": 12,
                 "enabled": 1,
                 "creator": 0,
                 "modifier": 0,
-                "created": "2018-06-25 15:37:17",
-                "modified": "2018-06-25 15:37:17",
-                "title": "加油类",
-                "description": "添加描述"
+                "created": "2018-07-31 16:45:35",
+                "modified": "2018-07-31 16:45:35",
+                "title": "科技类",
+                "quotes": 13,
+                "displayOrder": 0
+            },
+            {
+                "id": 8,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2018-07-31 16:39:55",
+                "modified": "2018-07-31 16:39:55",
+                "title": "生活类",
+                "quotes": 9,
+                "displayOrder": 0
+            },
+            {
+                "id": 4,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2018-07-31 16:29:30",
+                "modified": "2018-08-09 14:03:01",
+                "title": "体育类",
+                "quotes": 5,
+                "displayOrder": 0
+            },
+            {
+                "id": 14,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2018-07-31 16:48:15",
+                "modified": "2018-07-31 16:48:15",
+                "title": "职场类",
+                "quotes": 3,
+                "displayOrder": 0
+            },
+            {
+                "id": 5,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 2371,
+                "created": "2018-07-31 16:29:49",
+                "modified": "2018-08-02 15:10:30",
+                "title": "明星类",
+                "description": "dnf521",
+                "quotes": 1,
+                "displayOrder": 0
+            },
+            {
+                "id": 11,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2018-07-31 16:45:29",
+                "modified": "2018-07-31 16:45:29",
+                "title": "搞笑类",
+                "quotes": 1,
+                "displayOrder": 0
             },
             {
                 "id": 3,
@@ -823,10 +881,45 @@
                 "created": "2018-06-25 16:48:36",
                 "modified": "2018-06-25 16:50:57",
                 "title": "不一样的xxx类",
-                "description": "描述同样的事xxx"
+                "description": "描述同样的事xxx",
+                "quotes": 0,
+                "displayOrder": 0
+            },
+            {
+                "id": 6,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2018-07-31 16:30:47",
+                "modified": "2018-07-31 16:30:47",
+                "title": "测试类",
+                "quotes": 0,
+                "displayOrder": 0
+            },
+            {
+                "id": 9,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2018-07-31 16:43:10",
+                "modified": "2018-07-31 16:43:10",
+                "title": "健康类",
+                "quotes": 0,
+                "displayOrder": 0
+            },
+            {
+                "id": 10,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2018-07-31 16:44:21",
+                "modified": "2018-08-23 17:47:45",
+                "title": "文化类",
+                "quotes": 0,
+                "displayOrder": 0
             }
         ]
-    }
+      }
 
 ### 查询分类详情 [GET] /wxCategories/{id}
 + Parameters
