@@ -1,6 +1,7 @@
 + 2018年7月2日
-     + 添加标签列表
      + API初始化
++ 2018年8月28日     
+     + 添加标签列表
 
 ## 微信榜单订阅号
 + Data
@@ -179,7 +180,17 @@
             ]
         }
       }
-     
+## 微信客户端标签列表
++ Data
+     + id (Long) - ID
+     + title (String) - 标签名
+     + quotes (Long) - 公众号引用次数
+     + display_order (Long) - 排序
+     + enabled (int) - 启用
+     + creator (Long) - 创建人
+     + modifier (Long) - 修改人
+     + created  (date) - 创建时间
+     + modified (date) - 修改时间
 ### 列表 (客户端) [GET] wxTags?sort=-quotes
     
 + Parameters
