@@ -180,7 +180,7 @@
         }
       }
      
-### 列表 (客户端) [GET] wxTags?filter[quotes:gt]=0&sort=-quotes
+### 列表 (客户端) [GET] wxTags?sort=-quotes
     
 + Parameters
      + quotes 公众号引用次数/公众号的个数
