@@ -114,7 +114,7 @@
     + filter[minReviews] 最低浏览量
     + filter[seedId] 公众号标识
     + filter[orderBy] 排序，默认：点击量，1：点赞量，2：发布时间
-    + filter[regionId] 地区标识
+    + filter[tagsId] 标签标识
     + filter[categoryId]=1 分类标识
 + Response 200 (application/json)
     
@@ -244,7 +244,7 @@
     + filter[type] 类型，0：日榜 1:周榜 2：月榜
     + filter[startDate] 开始日期，格式yyyymmdd:20180521
     + filter[categoryId] 分类标识
-    + filter[tagsId] 地区标识
+    + filter[tagsId] 标签标识
     
 + Response 200 (application/json)
 
