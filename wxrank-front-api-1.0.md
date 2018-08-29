@@ -244,7 +244,7 @@
     + filter[type] 类型，0：日榜 1:周榜 2：月榜
     + filter[startDate] 开始日期，格式yyyymmdd:20180521
     + filter[categoryId] 分类标识
-    + filter[regionId] 地区标识
+    + filter[tagsId] 地区标识
     
 + Response 200 (application/json)
 
