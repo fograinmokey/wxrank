@@ -114,7 +114,7 @@
     + filter[minReviews] 最低浏览量
     + filter[seedId] 公众号标识
     + filter[orderBy] 排序，默认：点击量，1：点赞量，2：发布时间
-    + filter[tagsId] 标签标识
+    + filter[tagId] 标签标识
     + filter[categoryId]=1 分类标识
 + Response 200 (application/json)
     
