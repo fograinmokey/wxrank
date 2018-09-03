@@ -245,7 +245,7 @@
     + filter[startDate] 开始日期，格式yyyymmdd:20180521
     + filter[categoryId] 分类标识
     + filter[tagId] 标签标识
-    + include=seeds,seedsTags
+    + include=seeds,seedsTags 其中seeds必填，seedsTags的出现条件是：当根据标签过滤的时候必填，不根据标签过滤则不填
     
 + Response 200 (application/json)
 
