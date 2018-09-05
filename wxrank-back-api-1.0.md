@@ -137,7 +137,7 @@
             "id": 124,
             "type": "wxSeeds"
         }
-     }
+       }
        
 ### 修改 [PATCH] /wxSeeds/{id}
 + Description
@@ -180,7 +180,7 @@
             			"搞笑"
             	]
           }
-        }
+         }
 +  Response 200       
 
 
@@ -196,82 +196,138 @@
 
         {
         "meta": {
-            "totalPages": 8,
-            "totalElements": 78,
-            "size": 10,
+            "totalPages": 28,
+            "totalElements": 136,
+            "size": 5,
             "number": 1,
-            "numberOfElements": 10,
+            "numberOfElements": 5,
             "first": true,
             "last": false,
-            "sort": null
+            "sort": [
+                {
+                    "direction": "DESC",
+                    "property": "modified",
+                    "ignoreCase": false,
+                    "nullHandling": "NATIVE",
+                    "ascending": false,
+                    "descending": true
+                }
+            ]
         },
         "links": {
-            "self": "/wxSeeds?page[number]=1&page[size]=10",
-            "first": "/wxSeeds?page[number]=1&page[size]=10",
-            "next": "/wxSeeds?page[number]=2&page[size]=10",
-            "last": "/wxSeeds?page[number]=8&page[size]=10"
+            "self": "/wxSeeds?sort=-modified&page[number]=1&page[size]=5",
+            "first": "/wxSeeds?sort=-modified&page[number]=1&page[size]=5",
+            "next": "/wxSeeds?sort=-modified&page[number]=2&page[size]=5",
+            "last": "/wxSeeds?sort=-modified&page[number]=28&page[size]=5"
         },
         "data": [
             {
-                "id": 1,
+                "id": 149,
                 "enabled": 1,
                 "creator": 0,
-                "modifier": 1058,
-                "modified": "2018-08-03 09:08:03",
-                "articleSeedId": 125,
-                "title": "AKAI雅佳乐园",
-                "wechatId": "AKAIPro",
-                "biz": "MzIxNzY3MTc0OA==",
-                "logo": "http://static.budee.com/iyyren/image/201802/01/1554/302556114032148480.jpg",
-                "regionId": 11,
-                "categoryId": 9,
-                "categoryTitle": "测试类"
+                "modifier": 2371,
+                "created": "2018-08-22 19:01:40",
+                "modified": "2018-08-23 17:47:45",
+                "title": "定时深V发版",
+                "wechatId": "gfbb",
+                "logo": "",
+                "qrCode": "",
+                "funcIntro": "权威、实力，源自人民。",
+                "accountSubject": 0,
+                "subject": "阿斯顿撒旦飞洒的范德萨范德萨发",
+                "regionId": 99,
+                "categoryId": 10,
+                "tags": [
+                    "哦我我我我我我我",
+                    "哈哈哈哈哈哈哈哈",
+                    "新鲜好",
+                    "活力多",
+                    "美味强"
+                ],
+                "categoryTitle": "文化类",
+                "regionTitle": "宁波市"
             },
             {
-                "id": 2,
+                "id": 150,
                 "enabled": 1,
                 "creator": 0,
-                "modifier": 1058,
-                "modified": "2018-06-06 16:45:44",
-                "articleSeedId": 126,
-                "title": "艾维音响网",
-                "wechatId": "av010com",
-                "biz": "MjM5MzY4NTMwNA==",
-                "logo": "http://static.budee.com/iyyren/image/201802/01/1553/302555982347780096.jpg",
-                "regionId": 7,
-                "categoryId": 4,
-                "categoryTitle": "体育"
+                "modifier": 2371,
+                "created": "2018-08-23 16:48:16",
+                "modified": "2018-08-23 17:44:30",
+                "title": "花样滑冰很丰富",
+                "wechatId": "cvggb",
+                "logo": "",
+                "qrCode": "",
+                "funcIntro": "我就是那个你知道的如假包换的冷兔！爱生活，爱讲冷笑话~ 每日游走于各大社交平台分享各种精彩热门搞笑内容~ 想看冷笑话？关注我一个就够了！",
+                "accountSubject": 0,
+                "subject": "asDSAd阿斯蒂",
+                "regionId": 97,
+                "categoryId": 13,
+                "tags": [
+                    "哦我我我我我我我",
+                    "活力",
+                    "青春",
+                    "美好",
+                    "快乐"
+                ],
+                "categoryTitle": "创业类",
+                "regionTitle": "浙江省"
             },
             {
-                "id": 3,
+                "id": 118,
                 "enabled": 1,
-                "creator": 0,
+                "creator": 1058,
                 "modifier": 1058,
-                "modified": "2018-06-11 18:30:11",
-                "articleSeedId": 127,
-                "title": "Allanwang Studio",
-                "wechatId": "gh_7aae95c18635",
-                "biz": "MjM5NjEzMjEzMA==",
-                "logo": "http://static.budee.com/iyyren/image/201802/01/1552/302555646887346176.jpg",
-                "regionId": 8,
-                "categoryId": 0
-            },
-            {
-                "id": 10,
-                "enabled": 1,
-                "creator": 0,
-                "modifier": 1058,
-                "modified": "2018-07-04 15:27:15",
-                "articleSeedId": 134,
-                "title": "FunsMusicStudio",
-                "wechatId": "Funs_Music_Studio",
-                "biz": "MzU0MTA3ODIyOQ==",
-                "logo": "http://static.budee.com/iyyren/image/201802/05/1029/303923843335077888.jpg",
+                "created": "2018-08-06 13:39:40",
+                "modified": "2018-08-23 10:16:22",
+                "articleSeedId": 247,
+                "title": "中大华堂科技",
+                "wechatId": "zdht_keji",
+                "biz": "MzA5Njk4NDE3Mg==",
+                "logo": "//static.mifanxing.com/iyyren/image/201808/06/1339/369926353170087936.jpg",
+                "accountSubject": 0,
                 "regionId": 0,
                 "categoryId": 0
+            },
+            {
+                "id": 148,
+                "enabled": 1,
+                "creator": 1031,
+                "modifier": 1031,
+                "created": "2018-08-22 18:50:36",
+                "modified": "2018-08-22 18:50:36",
+                "title": "feilon",
+                "wechatId": "feig11",
+                "biz": "woshiwshaaaa",
+                "accountSubject": 0,
+                "regionId": 0,
+                "categoryId": 0,
+                "tags": [
+                    "哦我我我我我我我",
+                    "biaozi"
+                ]
+            },
+            {
+                "id": 147,
+                "enabled": 1,
+                "creator": 1031,
+                "modifier": 1031,
+                "created": "2018-08-22 18:46:21",
+                "modified": "2018-08-22 18:46:21",
+                "title": "feilongzaitian111",
+                "wechatId": "feiguohai123111",
+                "biz": "woshiwshifuaaaaa",
+                "accountSubject": 0,
+                "regionId": 0,
+                "categoryId": 0,
+                "tags": [
+                    "哦我我我我我我我",
+                    "哈哈哈哈哈哈哈哈",
+                    "biaozi111"
+                ]
             }
         ]
-      }
+       }
 
 ### 删除 [DELETE] /wxSeeds/{id}
 + Description
@@ -360,7 +416,7 @@
               "seedTitle": "AKAI雅佳乐园"
             }
           ]
-        }
+         }
 
 ### 删除 [DELETE] /topics/{id}
 
@@ -398,7 +454,7 @@
             "thumbsUp": 2,
             "seedTitle": "艾维音响网"
         }
-    }
+       }
   
 ## 地区管理
 + Data
@@ -438,7 +494,7 @@
                 "id": 431,
                 "type": "wxRegions"
             }
-        }
+         }
 
 ### 修改 [PATCH] /wxRegions/{id}
 + Description
@@ -454,7 +510,7 @@
             "data":{
             "title":"测试xx省"
             }
-        }
+         }
 
 + Response 200
 
@@ -691,8 +747,8 @@
                 "quotes": 0,
                 "displayOrder": 0
             }
-        ]
-    }
+         ]
+        }
 
 ### 查询地区详情 [GET] /wxRegions/{id}
 + Parameters
@@ -711,9 +767,9 @@
             "parentId": 67,
             "title": "哈尔滨市",
             "leaf": 1
+         }
         }
-    }
-
+ 
 
 
 ### 删除 [DELETE] /wxRegions/{id}
