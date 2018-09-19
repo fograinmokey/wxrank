@@ -313,4 +313,197 @@
         ]
       }
 
+### 公众号搜索 [GET] /wxSeeds/search
++ Data
+    + articleSeedId (Long) - seed与article的seed表id对应表 
+    + title (String) - 微信号名称
+    + wechatId (String) - 微信号wechat_id
+    + funcIntro (String) - 功能介绍
+    + biz (String) - 公众号唯一识别符（唯一）
+    + logo (String) - 公众号logo
+    + qrCode (String) - 二维码
+    + accountType (int) - 订阅号0   服务号1
+    + accountSubject (int) - 企业和个人
+    + subject (String) - 帐号主体
+    + companyName (String) - 企业全称
+    + region (object) - 地区
+    + category (object) - 分类
+    + tags (List<Object>) - 标签
+    + topic (object) - 最近更新的新闻
+    + description (String) - 描述
+    + language (int) - 0中文  1英文
+    + created (date) - 创建时间
+    + modified (date) - 修改时间
+
++ Parameters
+    + filter[q] 搜索关键字
+    + filter[tagId] 标签可多选，用逗号分隔
+    + filter[categoryId] 分类
+    
++ Response 200 (application/json)
+
+        {
+          "meta": {
+            "totalPages": 21,
+            "totalElements": 42,
+            "size": 2,
+            "number": 1,
+            "numberOfElements": 2,
+            "first": true,
+            "last": false,
+            "sort": null
+          },
+          "links": {
+            "self": "/seeds/search?filter[tagId]=8,11&page[number]=1&page[size]=2",
+            "first": "/seeds/search?filter[tagId]=8,11&page[number]=1&page[size]=2",
+            "next": "/seeds/search?filter[tagId]=8,11&page[number]=2&page[size]=2",
+            "last": "/seeds/search?filter[tagId]=8,11&page[number]=21&page[size]=2"
+          },
+          "data": [
+            {
+              "id": 271,
+              "meta": {
+                "score": 5.465853
+              },
+              "starIndex": 295.41,
+              "created": "2018-09-07 23:09:51",
+              "subject": "个人",
+              "accountType": null,
+              "companyName": "个人",
+              "description": null,
+              "accountSubject": 0,
+              "language": null,
+              "funcIntro": "执着于推广优秀贝斯手及发布贝斯资讯的组织与贝斯干货分享",
+              "title": "贝斯乌托邦",
+              "articleSeedId": 423,
+              "tags": [
+                {
+                  "id": 23,
+                  "title": "乐器"
+                },
+                {
+                  "light": 1,
+                  "id": 8,
+                  "title": "吉他/贝斯"
+                },
+                {
+                  "light": 1,
+                  "id": 11,
+                  "title": "个人主体"
+                }
+              ],
+              "biz": "MzUzNzE4NjgyNQ==",
+              "qrCode": "//static.mifanxing.com/iyyren/image/201809/07/2304/381664982615605248.jpg",
+              "regionId": 2,
+              "wechatId": "BassUtopia",
+              "modified": "2018-09-17 16:00:32",
+              "logo": "//static.mifanxing.com/iyyren/image/201809/07/2304/381664974784839680.jpg",
+              "category": {
+                "id": 24,
+                "title": "交流社区"
+              },
+              "region": {
+                "id": 2,
+                "parentId": 1,
+                "title": "北京市",
+                "parent": {
+                  "id": 1,
+                  "parentId": 0,
+                  "title": "北京市"
+                }
+              },
+              "lastPublish": "2018-09-13 00:54:46",
+              "topic": {
+                "id": 60024,
+                "title": "MI学院贝斯学生的一天！",
+                "postDate": "2018-09-12T16:54:46.000+0000",
+                "reviews": 0,
+                "thumbsUp": 0,
+                "openUpdate": 0
+              }
+            },
+            {
+              "id": 68,
+              "meta": {
+                "score": 5.015912
+              },
+              "starIndex": 0,
+              "created": "2017-12-12 00:00:00",
+              "subject": "个人",
+              "accountType": null,
+              "companyName": null,
+              "description": null,
+              "accountSubject": 0,
+              "language": null,
+              "funcIntro": "音乐领域权威门户，内容涵盖音乐人专业提升的乐器知识、创作技巧、录音制作乃至运营推广理念，还有最新的行业资讯和产业分析。旗下拥有“吉他攻略”垂直公众号。",
+              "title": "音乐人攻略",
+              "articleSeedId": 193,
+              "tags": [
+                {
+                  "id": 81,
+                  "title": "二手交易"
+                },
+                {
+                  "id": 1,
+                  "title": "录音"
+                },
+                {
+                  "id": 162,
+                  "title": "制作"
+                },
+                {
+                  "id": 23,
+                  "title": "乐器"
+                },
+                {
+                  "light": 1,
+                  "id": 8,
+                  "title": "吉他/贝斯"
+                },
+                {
+                  "id": 40,
+                  "title": "鼓/打击乐"
+                },
+                {
+                  "light": 1,
+                  "id": 11,
+                  "title": "个人主体"
+                },
+                {
+                  "id": 30,
+                  "title": "培训"
+                }
+              ],
+              "biz": "MjM5NjE2OTY0MA==",
+              "qrCode": "https://open.weixin.qq.com/qr/code?username=musicianguide",
+              "regionId": 224,
+              "wechatId": "musicianguide",
+              "modified": "2018-09-17 16:00:08",
+              "logo": "//static.mifanxing.com/iyyren/image/201803/15/1448/317759747891806208.jpg",
+              "category": {
+                "id": 24,
+                "title": "交流社区"
+              },
+              "region": {
+                "id": 224,
+                "parentId": 218,
+                "title": "佛山市",
+                "parent": {
+                  "id": 218,
+                  "parentId": 0,
+                  "title": "广东省"
+                }
+              },
+              "lastPublish": "2017-10-15 20:07:54",
+              "topic": {
+                "id": 52115,
+                "title": "5种方法打破小调五声音阶的套路",
+                "postDate": "2017-12-03T14:01:41.000+0000",
+                "reviews": 0,
+                "thumbsUp": 0,
+                "openUpdate": 0
+              }
+            }
+          ]
+        }
       
