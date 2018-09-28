@@ -313,6 +313,186 @@
         ]
       }
 
+### 微信文章榜单-搜索 [GET] /topics/search
++ Response Data
+    + wxSeedId - 在大数据这边的公众号id
+    + from.source 公众号名称
+    + from.image 公众号头像
+    + from.fetchThumbsUp - 点赞数
+    + from.fetchReviews - 阅读数
+    + wxCategoryId - 分类
+    + document.original - 是否原创
+    + document.documentType - 主题类型(0：图文，1：视频，2：音频，3：音视频混合)
+    + created 发布时间
+    
+
++ Parameters
+    + filter[wx]=1  在大数据的页面使用这个接口时，应添加的必要筛选条件
+    + filter[created:gt] 日期大于，参数值格式为yyyy-MM-dd
+    + filter[created:lt] 日期小于，参数值格式为yyyy-MM-dd
+    + filter[items.original] 过滤是否原创0/1:否/是
+    + filter[items.fetchReviews:gt]=10000 阅读一万+
+    + filter[items.documentType] 主题类型(0：图文，1：视频，2：音频，3：音视频混合)
+
++ Description
+    + 接口和米饭星新闻的搜索接口是同一个即/topics/search
+    + 排行，不填写sort参数为根据相关度排序，sort=-items.fetchReviews为根据阅读降序，sort=-items.fetchThumbsUp为根据点赞数降序，sort=-created
+    + 文章列表中点击公众号，到公众号详情，此时取的公众号id为wxSeedId
+
++ Response 200 (application/json)
+
+        {
+          "meta": {
+            "totalPages": 1,
+            "totalElements": 2,
+            "size": 10,
+            "number": 1,
+            "numberOfElements": 2,
+            "first": true,
+            "last": true,
+            "sort": null
+          },
+          "links": {
+            "self": "/topics/search?filter[wx]=1&agg[size]=-1&filter[created:gt]=2018-09-27 17:58:11&sort=-items.fetchReviews&page[number]=1&page[size]=10",
+            "first": "/topics/search?filter[wx]=1&agg[size]=-1&filter[created:gt]=2018-09-27 17:58:11&sort=-items.fetchReviews&page[number]=1&page[size]=10",
+            "last": "/topics/search?filter[wx]=1&agg[size]=-1&filter[created:gt]=2018-09-27 17:58:11&sort=-items.fetchReviews&page[number]=1&page[size]=10"
+          },
+          "data": [
+            {
+              "id": 1413476,
+              "meta": {
+                "score": "NaN"
+              },
+              "forumId": 3,
+              "forumName": "新闻",
+              "topicType": 0,
+              "topicTypeValue": "正常",
+              "imageSingle": false,
+              "imageRotation": false,
+              "creator": 0,
+              "created": "2018-09-27 18:20:23",
+              "modified": "2018-09-28 10:11:35",
+              "wx": 1,
+              "wxTopicId": 70402,
+              "articleTopicId": 1413476,
+              "reviews": 0,
+              "replies": 0,
+              "thumbsUp": 0,
+              "thumbsDown": 0,
+              "thumbs": 0,
+              "liked": 0,
+              "favorite": 0,
+              "brand": null,
+              "rotations": null,
+              "images": [],
+              "coverImages": null,
+              "from": {
+                "image": "http://static.budee.com/iyyren/image/201803/15/1453/317761140065189888.jpg",
+                "fetchReviews": 0,
+                "reviews": 0,
+                "wxSeedId": 60,
+                "seedId": 185,
+                "origin": "http://mp.weixin.qq.com/s?__biz=MzIyMDkwMzczOQ==&mid=2247518058&idx=7&sn=f8f2ba5b6798b5446704415108db40eb&chksm=97c6273ea0b1ae284c6f6ea082bc071976e42ac393b5d1c5baf6f40b4c5ca44a3568f377447d&scene=27#wechat_redirect&seedId=60&groupSign=1538100095992&top=0&original=100time=1538054754",
+                "host": "null://null",
+                "rating": null,
+                "source": "摇滚客",
+                "channelId": 172
+              },
+              "wxCategoryId": 20,
+              "post": {
+                "postType": 1,
+                "postTypeValue": "爬取",
+                "title": "除了开挂民族和黑人大兄弟，全世界的老铁都在被痘痘困扰...",
+                "tags": [
+                  "痘痘",
+                  "皮肤",
+                  "印度",
+                  "油脂",
+                  "曼秀雷敦",
+                  "洗面奶",
+                  "长痘痘",
+                  "痘",
+                  "尖",
+                  "毛孔"
+                ]
+              },
+              "document": {
+                "postDate": "2018-09-27",
+                "author": "摇滚客",
+                "documentType": 0,
+                "original": 0
+              },
+              "similarities": []
+            },
+            {
+              "id": 1413471,
+              "meta": {
+                "score": "NaN"
+              },
+              "forumId": 3,
+              "forumName": "新闻",
+              "topicType": 0,
+              "topicTypeValue": "正常",
+              "imageSingle": false,
+              "imageRotation": false,
+              "creator": 0,
+              "created": "2018-09-27 18:13:51",
+              "modified": "2018-09-28 10:11:35",
+              "wx": 1,
+              "wxTopicId": 70397,
+              "articleTopicId": 1413471,
+              "reviews": 0,
+              "replies": 0,
+              "thumbsUp": 0,
+              "thumbsDown": 0,
+              "thumbs": 0,
+              "liked": 0,
+              "favorite": 0,
+              "brand": null,
+              "rotations": null,
+              "images": [],
+              "coverImages": null,
+              "from": {
+                "image": "http://static.budee.com/iyyren/image/201803/15/1453/317761140065189888.jpg",
+                "fetchReviews": 0,
+                "reviews": 0,
+                "wxSeedId": 60,
+                "seedId": 185,
+                "origin": "http://mp.weixin.qq.com/s?__biz=MzIyMDkwMzczOQ==&mid=2247518058&idx=5&sn=2f05155d8186ddd04484aa1047712da9&chksm=97c6273ea0b1ae286f3a2d012f2fc62bcdd7bd241e60d136a033278352fa053b5ae5b1f047d9&scene=27#wechat_redirect&seedId=60&groupSign=1538100095992&top=0&original=11time=1538054754",
+                "host": "null://null",
+                "rating": null,
+                "source": "摇滚客",
+                "channelId": 172
+              },
+              "wxCategoryId": 20,
+              "post": {
+                "postType": 1,
+                "postTypeValue": "爬取",
+                "title": "只有这20张老照片能证明，这支乐队曾经存在过，而且还特牛逼！",
+                "tags": [
+                  "楷",
+                  "哥",
+                  "摇滚",
+                  "乐队",
+                  "领悟",
+                  "年代",
+                  "师兄",
+                  "商演",
+                  "滚君",
+                  "排练"
+                ]
+              },
+              "document": {
+                "postDate": "2018-09-27",
+                "author": "摇滚客",
+                "documentType": 2,
+                "original": 1
+              },
+              "similarities": []
+            }
+          ]
+        }
+
 ### 公众号搜索 [GET] /wxSeeds/search
 + Data
     + articleSeedId (Long) - seed与article的seed表id对应表 
@@ -506,4 +686,3 @@
             }
           ]
         }
-      
