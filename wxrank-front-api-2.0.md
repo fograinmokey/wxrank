@@ -337,7 +337,8 @@
 + Description
     + 接口和米饭星新闻的搜索接口是同一个即/topics/search
     + 排行，不填写sort参数为根据相关度排序，sort=-items.fetchReviews为根据阅读降序，sort=-items.fetchThumbsUp为根据点赞数降序，sort=-created
-    + 文章列表中点击公众号，到公众号详情，此时取的公众号id为wxSeedId
+    + 当点击公众号，到公众号详情，此时取的公众号id为wxSeedId
+    + 当点击这篇文章查看详情时，文章id应取字段'articleTopicId'，如果articleTopicId=null或者articleTopicId=0则说明这篇文章在数据库中没有保存内容，因此只能去取外部连接from.origin进行跳转。
 
 + Response 200 (application/json)
 
