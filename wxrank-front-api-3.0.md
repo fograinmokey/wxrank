@@ -1,4 +1,4 @@
-+ 2018年10月16日
++ 2018年10月15日
     +  自定义榜单初始化
 ## 自定义榜单
 + Data
@@ -27,7 +27,6 @@
 ### 增加 [POST] /wxCustomRanks
 + Description
     + [MUST] authenticated
-    + [MUST] ROLE_AD_USER
 + Request (application/json)
     
       {
@@ -49,7 +48,6 @@
 ### 修改[PUTCH] /wxCustomRanks/{id}
 + Description
     + [MUST] authenticated
-    + [MUST] ROLE_AD_USER
 + Request (application/json)
     
       {
@@ -64,7 +62,6 @@
 ### 榜单列表 [GET] /wxCustomRanks?page[number]=1&page[size]=10
 + Description
     + [MUST] authenticated
-    + [MUST] ROLE_AD_USER
 + Request (application/json)
     
       {
@@ -131,7 +128,6 @@
 ### 删除 [DELETE] /wxCustomRanks/{id}
 + Description
     + [MUST] authenticated
-    + [MUST] ROLE_AD_USER
 + Parameters
     + 删除榜单的同时也将榜单中的所有公众号删除 
 + Response 204
@@ -139,7 +135,6 @@
 ### 增加自定义榜单下公众号 [POST] /wxCustomRanks/seeds
 + Description
     + [MUST] authenticated
-    + [MUST] ROLE_AD_USER
 + Request (application/json)
     
       {
@@ -238,6 +233,12 @@
             }
         ]
       }
+
+
+### 删除榜单下公众号 [DELETE] /wxCustomRanks/seed/{id} 
++ Description
+    + [MUST] authenticated
++ Response 204  
 
 ### 榜单下文章列表 [GET] /topics/customRankTopics?filter[customRanksId]=1&filter[period]=0
 + Parameters
