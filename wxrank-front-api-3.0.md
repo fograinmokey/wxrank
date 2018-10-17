@@ -59,7 +59,7 @@
 
 + Response 200
 
-### 我的榜单列表 [GET] /wxCustomRanks?page[number]=1&page[size]=10
+### 我的榜单列表 [GET] /wxCustomRanks/mineRanks?page[number]=1&page[size]=10
 + Description
     + [MUST] authenticated
 + Request (application/json)
@@ -122,7 +122,7 @@
         ]
       }
 
-### 自定义榜单列表 [GET] /wxCustomRanks/customRanks?filter[status]=1&page[number]=1&page[size]=10
+### 自定义榜单列表 [GET] /wxCustomRanks?filter[status]=1&page[number]=1&page[size]=10
 + Parameters
     + filter[status] 公开状态 0:不公开 1:公开
 
