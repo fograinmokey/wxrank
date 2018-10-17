@@ -59,7 +59,7 @@
 
 + Response 200
 
-### 榜单列表 [GET] /wxCustomRanks?page[number]=1&page[size]=10
+### 我的榜单列表 [GET] /wxCustomRanks?page[number]=1&page[size]=10
 + Description
     + [MUST] authenticated
 + Request (application/json)
@@ -122,8 +122,54 @@
         ]
       }
 
+### 自定义榜单列表 [GET] /wxCustomRanks/customRanks?filter[status]=1&page[number]=1&page[size]=10
 
 
++ Request (application/json)
+    
+      {
+        "meta": {
+            "totalPages": 1,
+            "totalElements": 2,
+            "size": 10,
+            "number": 1,
+            "numberOfElements": 2,
+            "first": true,
+            "last": true,
+            "sort": null
+        },
+        "links": {
+            "self": "wxCustomRanks/customRanks?filter[status]=1&page[number]=1&page[size]=10",
+            "first": "wxCustomRanks/customRanks?filter[status]=1&page[number]=1&page[size]=10",
+            "last": "wxCustomRanks/customRanks?filter[status]=1&page[number]=1&page[size]=10"
+        },
+        "data": [
+            {
+                "id": 2,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2018-10-15 10:43:58",
+                "modified": "2018-10-17 11:23:00",
+                "title": "竞争对手1",
+                "seedNum": 8,
+                "description": "竞争对手1描述",
+                "reviews": 2,
+                "status": 1
+            },
+            {
+                "id": 4,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "title": "冰点百分百",
+                "seedNum": 0,
+                "description": "刚好能够放你那描述",
+                "reviews": 0,
+                "status": 1
+            }
+        ]
+      }
 
 ### 删除 [DELETE] /wxCustomRanks/{id}
 + Description
