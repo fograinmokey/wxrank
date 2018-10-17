@@ -8,7 +8,7 @@
         + seedNum (int) - 公众号数量
         + description (String) - 描述
         + reviews (int) - 阅读数
-        + status (int) - 公开状态 0:不公开 1:公开
+        + status (int) - 公开状态 0:不公开(默认) 1:公开
         + enabled (int) - 使能 0禁止 1启用
         + creator (Long) - 创建人
         + modifier (Long) - 修改人
@@ -123,7 +123,8 @@
       }
 
 ### 自定义榜单列表 [GET] /wxCustomRanks/customRanks?filter[status]=1&page[number]=1&page[size]=10
-
++ Parameters
+    + filter[status] 公开状态 0:不公开 1:公开
 
 + Request (application/json)
     
