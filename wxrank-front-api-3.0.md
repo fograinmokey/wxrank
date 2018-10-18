@@ -282,10 +282,14 @@
       }
 
 
-### 删除榜单下公众号 [DELETE] /wxCustomRanks/seed/{id} 
+### 删除榜单下公众号 [DELETE] /wxCustomRanks/seed?customRanksId=1&seedId=66 
 + Description
     + [MUST] authenticated
-+ Response 204  
++ Parameters
+    + customRanksId 榜单ID
+    + seedId 公众号ID
++ Response 200
+    + 删除条数：1
 
 ### 榜单下文章列表 [GET] /topics/customRankTopics?filter[customRanksId]=1&filter[period]=0
 + Parameters
