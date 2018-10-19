@@ -282,7 +282,7 @@
       }
 
 
-### 删除榜单下公众号 [DELETE] /wxCustomRanks/seed?customRanksId=1&seedId=66 
+### 删除榜单下公众号 [DELETE] /wxCustomRanks/seeds?customRanksId=1&seedId=66 
 + Description
     + [MUST] authenticated
 + Parameters
