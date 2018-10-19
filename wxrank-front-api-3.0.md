@@ -209,74 +209,109 @@
       {
         "meta": {
             "totalPages": 1,
-            "totalElements": 5,
+            "totalElements": 6,
             "size": 10,
             "number": 1,
-            "numberOfElements": 5,
+            "numberOfElements": 6,
             "first": true,
             "last": true,
             "sort": null
         },
         "links": {
-            "self": "wxrank/customRank?filter[startDate]=20180805&filter[type]=0&filter[customRanksId]=1&page[number]=1&page[size]=10",
-            "first": "wxrank/customRank?filter[startDate]=20180805&filter[type]=0&filter[customRanksId]=1&page[number]=1&page[size]=10",
-            "last": "wxrank/customRank?filter[startDate]=20180805&filter[type]=0&filter[customRanksId]=1&page[number]=1&page[size]=10"
+            "self": "wxrank/customRankSeeds?filter[startDate]=20180805&filter[type]=0&filter[customRanksId]=1&page[number]=1&page[size]=10",
+            "first": "wxrank/customRankSeeds?filter[startDate]=20180805&filter[type]=0&filter[customRanksId]=1&page[number]=1&page[size]=10",
+            "last": "wxrank/customRankSeeds?filter[startDate]=20180805&filter[type]=0&filter[customRanksId]=1&page[number]=1&page[size]=10"
         },
         "data": [
-               {
+            {
                 "id": 64400,
+                "seedId": 75,
                 "postNum": 1,
-                "allReviews": 15389,
-                "maxReviews": 6897,
-                "allPraises": 227,
-                "starIndex": 698.94,
+                "topicNum": 6,
+                "allReviews": 64385,
+                "maxReviews": 24609,
+                "allPraises": 815,
+                "starIndex": 944.37,
                 "ranking": 0,
-                "averageReviews": 2565,
-                "seedTitle": "乐器演奏家"
+                "averageReviews": 10731,
+                "seedTitle": "乐器演奏家",
+                "wechatId": "yqyanzoujia",
+                "seedLogo": "//static.mifanxing.com/iyyren/image/201807/20/1000/363710671256436736.jpg"
             },
             {
                 "id": 64364,
+                "seedId": 69,
                 "postNum": 1,
-                "allReviews": 2016,
-                "maxReviews": 2016,
+                "topicNum": 1,
+                "allReviews": 3449,
+                "maxReviews": 3449,
                 "allPraises": 9,
-                "starIndex": 510.45,
+                "starIndex": 577.73,
                 "ranking": 0,
-                "averageReviews": 2016,
-                "seedTitle": "音乐人网"
+                "averageReviews": 3449,
+                "seedTitle": "音乐人网",
+                "wechatId": "YYRW365",
+                "seedLogo": "//static.mifanxing.com/iyyren/image/201803/15/1447/317759625313271808.jpg"
             },
             {
                 "id": 64324,
+                "seedId": 63,
                 "postNum": 1,
-                "allReviews": 4041,
-                "maxReviews": 2170,
-                "allPraises": 48,
-                "starIndex": 506.1,
+                "topicNum": 5,
+                "allReviews": 6821,
+                "maxReviews": 2969,
+                "allPraises": 69,
+                "starIndex": 568.64,
                 "ranking": 0,
-                "averageReviews": 809,
-                "seedTitle": "影音新生活"
+                "averageReviews": 1365,
+                "seedTitle": "影音新生活",
+                "wechatId": "Cloud9AV",
+                "seedLogo": "//static.mifanxing.com/iyyren/image/201803/15/1452/317760864881098752.jpg"
             },
             {
                 "id": 64346,
+                "seedId": 67,
                 "postNum": 1,
-                "allReviews": 2456,
-                "maxReviews": 1147,
-                "allPraises": 32,
-                "starIndex": 444.92,
+                "topicNum": 4,
+                "allReviews": 4440,
+                "maxReviews": 1570,
+                "allPraises": 67,
+                "starIndex": 518.75,
                 "ranking": 0,
-                "averageReviews": 614,
-                "seedTitle": "音乐财经"
+                "averageReviews": 1110,
+                "seedTitle": "音乐财经",
+                "wechatId": "musicbusiness",
+                "seedLogo": "//static.mifanxing.com/iyyren/image/201808/02/1111/368439525627805696.jpg"
+            },
+            {
+                "id": 65058,
+                "seedId": 8,
+                "postNum": 1,
+                "topicNum": 1,
+                "allReviews": 1638,
+                "maxReviews": 1638,
+                "allPraises": 6,
+                "starIndex": 477.23,
+                "ranking": 0,
+                "averageReviews": 1638,
+                "seedTitle": "Eplay吉他",
+                "wechatId": "eplayguitar",
+                "seedLogo": "//static.mifanxing.com/iyyren/image/201802/03/1621/303287728718626816.jpg"
             },
             {
                 "id": 64340,
+                "seedId": 66,
                 "postNum": 1,
-                "allReviews": 958,
-                "maxReviews": 958,
-                "allPraises": 11,
-                "starIndex": 428.03,
+                "topicNum": 1,
+                "allReviews": 1314,
+                "maxReviews": 1314,
+                "allPraises": 15,
+                "starIndex": 470.18,
                 "ranking": 0,
-                "averageReviews": 958,
-                "seedTitle": "音频圈"
+                "averageReviews": 1314,
+                "seedTitle": "音频圈",
+                "wechatId": "AllAudio2017",
+                "seedLogo": "//static.mifanxing.com/iyyren/image/201803/15/1449/317760005560483840.jpg"
             }
         ]
       }
