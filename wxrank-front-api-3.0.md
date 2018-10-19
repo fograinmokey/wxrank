@@ -335,116 +335,172 @@
 
         {
         "meta": {
-            "totalPages": 2,
-            "totalElements": 12,
-            "size": 10,
+            "totalPages": 1,
+            "totalElements": 17,
+            "size": 25,
             "number": 1,
-            "numberOfElements": 12,
+            "numberOfElements": 17,
             "first": true,
-            "last": false,
+            "last": true,
             "sort": null
         },
         "links": {
-            "self": "/topics/customRankTopics?filter[startDate]=2018-08-16&filter[endDate]=2018-08-17&filter[customRanksId]=1&page[number]=1&page[size]=10",
-            "first": "/topics/customRankTopics?filter[startDate]=2018-08-16&filter[endDate]=2018-08-17&filter[customRanksId]=1&page[number]=1&page[size]=10",
-            "next": "/topics/customRankTopics?filter[startDate]=2018-08-16&filter[endDate]=2018-08-17&filter[customRanksId]=1&page[number]=2&page[size]=10",
-            "last": "/topics/customRankTopics?filter[startDate]=2018-08-16&filter[endDate]=2018-08-17&filter[customRanksId]=1&page[number]=2&page[size]=10"
+            "self": "/topics/customRankTopics?filter[period]=1&filter[customRanksId]=42&page[number]=1&page[size]=25",
+            "first": "/topics/customRankTopics?filter[period]=1&filter[customRanksId]=42&page[number]=1&page[size]=25",
+            "last": "/topics/customRankTopics?filter[period]=1&filter[customRanksId]=42&page[number]=1&page[size]=25"
         },
         "data": [
             {
+                "id": 77667,
                 "boost": 1,
-                "title": "品味经典情歌，回忆动人的爱恋",
-                "reviews": 1649,
-                "thumbsUp": 23,
-                "seedTitle": "影音新生活",
+                "title": "偶像练习生林超泽：专注，我的热爱",
+                "reviews": 4355,
+                "thumbsUp": 20,
+                "seedTitle": "Bose",
                 "openUpdate": 0
             },
             {
+                "id": 77668,
                 "boost": 1,
-                "title": "经典类型片究竟如何抓住观众眼球？——探寻《巨齿鲨》和《延禧攻略》爆火的原因",
-                "reviews": 838,
+                "title": "开奖 | 声藏Blue QC 35II 无线消噪耳机焕新登场",
+                "reviews": 4323,
+                "thumbsUp": 24,
+                "seedTitle": "Bose",
+                "openUpdate": 0
+            },
+            {
+                "id": 77907,
+                "boost": 1,
+                "title": "“好se之徒·为声而生”1500多名色粉相约SE音乐节！",
+                "reviews": 2199,
+                "thumbsUp": 31,
+                "seedTitle": "CA001",
+                "openUpdate": 0
+            },
+            {
+                "id": 77860,
+                "boost": 1,
+                "title": "老鹰乐队-加州旅馆 全曲中文讲解和示范丨主讲人Danny Gill丨提供下载地址",
+                "reviews": 2176,
+                "thumbsUp": 19,
+                "seedTitle": "拨片破坏狂吉他电吉他教学",
+                "openUpdate": 0
+            },
+            {
+                "id": 77666,
+                "boost": 1,
+                "title": "仅需片刻，即可一听倾心",
+                "reviews": 1950,
+                "thumbsUp": 14,
+                "seedTitle": "Bose",
+                "openUpdate": 0
+            },
+            {
+                "id": 77809,
+                "boost": 1,
+                "title": "上海展直击：2018 Prolight + Sound上海展！揭秘品牌“新看点”",
+                "reviews": 1855,
+                "thumbsUp": 17,
+                "seedTitle": "CA001",
+                "openUpdate": 0
+            },
+            {
+                "id": 77611,
+                "boost": 1,
+                "title": "枪花乐队Nightrain讲解-Danny Gill主讲丨附下载链接",
+                "reviews": 1482,
+                "thumbsUp": 11,
+                "seedTitle": "拨片破坏狂吉他电吉他教学",
+                "openUpdate": 0
+            },
+            {
+                "id": 78290,
+                "boost": 1,
+                "title": "迈克尔杰克逊Beat It，Solo段落详细讲解和示范丨视频，附下载",
+                "reviews": 1479,
+                "thumbsUp": 7,
+                "seedTitle": "拨片破坏狂吉他电吉他教学",
+                "openUpdate": 0
+            },
+            {
+                "id": 77913,
+                "boost": 1,
+                "title": "Shot to Thrill-AC/DC 华彩段讲解-节奏/Solo/Breakdown",
+                "reviews": 1268,
                 "thumbsUp": 9,
-                "seedTitle": "文化产业评论",
+                "seedTitle": "拨片破坏狂吉他电吉他教学",
                 "openUpdate": 0
             },
             {
+                "id": 78034,
                 "boost": 1,
-                "title": "内容产业的本质判断：信息接收的过去、现在与未来",
-                "reviews": 367,
-                "thumbsUp": 6,
-                "seedTitle": "文化产业评论",
-                "openUpdate": 0
-            },
-            {
-                "boost": 1,
-                "title": "最新！《2017中国文物艺术品全球拍卖统计年报》（全文）",
-                "reviews": 255,
-                "thumbsUp": 0,
-                "seedTitle": "文化产业评论",
-                "openUpdate": 0
-            },
-            {
-                "boost": 1,
-                "title": "设计丨新美式，大美至简的高贵气质！",
-                "reviews": 242,
-                "thumbsUp": 2,
-                "seedTitle": "影音新生活",
-                "openUpdate": 0
-            },
-            {
-                "boost": 1,
-                "title": "新品首发 | Denon天龙 AVR-X2500H 7.2声道4K AV接收机",
-                "reviews": 169,
-                "thumbsUp": 1,
-                "seedTitle": "影音新生活",
-                "openUpdate": 0
-            },
-            {
-                "boost": 1,
-                "title": "倒计时一周，飞利信（3号馆3112展位）约您来看PALM EXPO 2018",
-                "reviews": 135,
+                "title": "看不见的“声音”威胁，这种现象音响人都遇到过！",
+                "reviews": 620,
                 "thumbsUp": 3,
-                "seedTitle": "飞利信",
+                "seedTitle": "艾维音响网",
                 "openUpdate": 0
             },
             {
+                "id": 77649,
                 "boost": 1,
-                "title": "LD systems成为营造舒适餐厅氛围的关键",
-                "reviews": 107,
-                "thumbsUp": 0,
-                "seedTitle": "亚洲专业音响",
+                "title": "用户至上，Apogee JAM+ 巨幅升级",
+                "reviews": 461,
+                "thumbsUp": 3,
+                "seedTitle": "叉烧网",
                 "openUpdate": 0
             },
             {
+                "id": 78027,
                 "boost": 1,
-                "title": "“沉浸式”音频已成为席卷欧洲的行业革命",
-                "reviews": 104,
-                "thumbsUp": 0,
-                "seedTitle": "亚洲专业音响",
+                "title": "奥运之城—青岛再次扬帆逐梦 ---开幕式谱写省运之最",
+                "reviews": 362,
+                "thumbsUp": 7,
+                "seedTitle": "CA001",
                 "openUpdate": 0
             },
             {
+                "id": 78297,
                 "boost": 1,
-                "title": "推荐 | “衰减率低、可弯折、耐用度高，高品质的HDMI线”FIBBR Ultra Pro 光纤HDMI线",
-                "reviews": 100,
+                "title": "2018上海乐展：丹拿 LYD 的“表哥”要来?",
+                "reviews": 323,
+                "thumbsUp": 10,
+                "seedTitle": "叉烧网",
+                "openUpdate": 0
+            },
+            {
+                "id": 78044,
+                "boost": 1,
+                "title": "第37期录音混音班开始报名！目前只有4个名额哦。",
+                "reviews": 271,
                 "thumbsUp": 1,
-                "seedTitle": "影音新生活",
+                "seedTitle": "Allanwang Studio",
                 "openUpdate": 0
             },
             {
+                "id": 78026,
                 "boost": 1,
-                "title": "热点 | 2018-2019 EISA获奖名单KEF Q系列荣获大奖",
-                "reviews": 91,
-                "thumbsUp": 2,
-                "seedTitle": "影音新生活",
+                "title": "与梦想同行 ESS声动2018阿拉善Dreamland电音节",
+                "reviews": 209,
+                "thumbsUp": 4,
+                "seedTitle": "CA001",
                 "openUpdate": 0
             },
             {
+                "id": 78035,
                 "boost": 1,
-                "title": "雅马哈旗舰级数字混音系统RIVAGE PM10北京发布会完满结束",
-                "reviews": 58,
-                "thumbsUp": 0,
-                "seedTitle": "亚洲专业音响",
+                "title": "新品发布| 全静音自动LED灯具，和“噪音”说拜拜！",
+                "reviews": 141,
+                "thumbsUp": 3,
+                "seedTitle": "艾维音响网",
+                "openUpdate": 0
+            },
+            {
+                "id": 78036,
+                "boost": 1,
+                "title": "现场直击| 全球3900家厂商争奇斗艳",
+                "reviews": 131,
+                "thumbsUp": 3,
+                "seedTitle": "艾维音响网",
                 "openUpdate": 0
             }
         ]
