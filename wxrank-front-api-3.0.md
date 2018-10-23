@@ -130,7 +130,7 @@
 + Description
     + [MUST] authenticated
 + Parameters
-    + customRankId 我的榜单ID
+    + customRankId 我的榜单榜单ID
 + Request (application/json)
 
       {
