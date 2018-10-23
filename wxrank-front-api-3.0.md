@@ -1,6 +1,10 @@
+## 自定义榜单
 + 2018年10月16日
     +  自定义榜单初始化
-## 自定义榜单
+
++ 2018年10月23日
+    +  添加我的榜单中榜单已选公众号列表 
+
 + Data
     + CustomRanks - 自定义榜单表
         + id (Long) - ID
@@ -121,6 +125,49 @@
             }
         ]
       }
+
+### 我的榜单中榜单已选公众号列表 [GET] /wxCustomRanks/mineRanksSeeds/{customRankId}
++ Description
+    + [MUST] authenticated
++ Parameters
+    + customRankId 我的榜单ID
++ Request (application/json)
+
+      {
+        "data": [
+            {
+                "id": 76,
+                "seedId": 73,
+                "seedTitle": "米饭星",
+                "wechatId": "mifanxing1"
+            },
+            {
+                "id": 77,
+                "seedId": 90,
+                "seedTitle": "音频帮丨大事件",
+                "wechatId": "audiooh"
+            },
+            {
+                "id": 78,
+                "seedId": 95,
+                "seedTitle": "音频帮",
+                "wechatId": "yinpinbang"
+            },
+            {
+                "id": 79,
+                "seedId": 46,
+                "seedTitle": "太平宝迪",
+                "wechatId": "gh_6ba060361838"
+            },
+            {
+                "id": 81,
+                "seedId": 420,
+                "seedTitle": "太平宝迪售后服务",
+                "wechatId": "Budee-Service"
+            }
+        ]
+      }
+
 
 ### 自定义榜单列表 [GET] /wxCustomRanks?filter[status]=1&page[number]=1&page[size]=10
 + Parameters
