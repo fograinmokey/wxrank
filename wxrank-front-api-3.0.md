@@ -499,4 +499,87 @@
         ]
       }
 
+### 获取重复的文章 [GET] /topics/getRepeatTopics/{topicId}?page[number]=1&page[size]=3
 
++ Description
+    + 点击详情时ID取articleTopicId
+    + 如果articleTopicId=0，则详情需要跳转到from.origin
++ Response 200 (application/json)
+
+        {
+          "meta": {
+            "totalPages": 2,
+            "totalElements": 5,
+            "size": 3,
+            "number": 1,
+            "numberOfElements": 3,
+            "first": true,
+            "last": false,
+            "sort": null
+          },
+          "links": {
+            "self": "/topics/getRepeatTopics?page[number]=1&page[size]=3",
+            "first": "/topics/getRepeatTopics?page[number]=1&page[size]=3",
+            "next": "/topics/getRepeatTopics?page[number]=2&page[size]=3",
+            "last": "/topics/getRepeatTopics?page[number]=2&page[size]=3"
+          },
+          "data": [
+            {
+              "id": 17852,
+              "enabled": 1,
+              "created": "2018-05-31 12:48:34",
+              "modified": "2018-11-05 18:27:13",
+              "boost": 1,
+              "articleTopicId": 1203441,
+              "seedId": 51,
+              "type": 0,
+              "title": "科普 | 听现场真的会提高自己对音响表现的认知么？",
+              "postDate": "2018-04-03T07:15:00.000+0000",
+              "original": 0,
+              "isRepeat": 1,
+              "reviews": 0,
+              "thumbsUp": 0,
+              "seedTitle": "演艺科技传媒",
+              "seedLogo": "//static.mifanxing.com/iyyren/image/201803/15/1504/317763845617762304.jpg",
+              "openUpdate": 0
+            },
+            {
+              "id": 29630,
+              "enabled": 1,
+              "created": "2018-06-01 14:44:42",
+              "modified": "2018-11-05 18:27:13",
+              "boost": 1,
+              "articleTopicId": 1146658,
+              "seedId": 52,
+              "type": 0,
+              "title": "听现场与音响耳机聆听",
+              "postDate": "2018-04-10T04:54:50.000+0000",
+              "original": 0,
+              "isRepeat": 1,
+              "reviews": 0,
+              "thumbsUp": 0,
+              "seedTitle": "HiFi秀",
+              "seedLogo": "//static.mifanxing.com/iyyren/image/201803/15/1442/317758375146438656.jpg",
+              "openUpdate": 0
+            },
+            {
+              "id": 28787,
+              "enabled": 1,
+              "created": "2018-06-01 14:20:51",
+              "modified": "2018-11-05 18:27:13",
+              "boost": 1,
+              "articleTopicId": 1165925,
+              "seedId": 42,
+              "type": 0,
+              "title": "听现场与音响耳机聆听",
+              "postDate": "2018-04-24T00:36:31.000+0000",
+              "original": 0,
+              "isRepeat": 1,
+              "reviews": 0,
+              "thumbsUp": 0,
+              "seedTitle": "声学楼电声技术网络交流平台",
+              "seedLogo": "//static.mifanxing.com/iyyren/image/201803/15/1507/317764646700466176.jpg",
+              "openUpdate": 0
+            }
+          ]
+        }
