@@ -3,7 +3,341 @@
     + 榜单文章快速移除
 + 2018年11月9日
     + 添加重复文章列表
++ 2018年11月30日
+    +  词典管理初始化
+    +  词典分类初始化
+## 词典管理 
++ Data
+    + NlpUserDic 词典表
+        + id (Long) - ID
+        + categoryId (Long) - 分类
+        + word (String) - 词
+        + language (int) -  0:中文; 1:英文
+        + description (String) - 描述
+        + wordTranslation (String) - 单词翻译
+        + descriptionTranslation (String) - 描述翻译
+        + frequency (int) - 词频
+        + isShow (int) - 0:不展示;  1:展示; 有些词只用于分词词典，不需要展示
+        + version (Long) - 版本
+        + enabled (int) - 使能 0禁止 1启用
+        + creator (Long) - 创建人
+        + modifier (Long) - 修改人
+        + created (date) - 创建时间
+        + modified (date) - 修改时间 
+    + DicSynonym 同义词表
+        + id (Long) - ID
+        + dicId (Long) - 词id
+        + synonym (String) - 同义词
+        + version (Long) - 版本
 
+### 增加 [POST] /nlpUserDic
++ Description
+    + [MUST] authenticated
+    + [MUST] ROLE_ADMIN
++ Request (application/json)
+    
+      {
+    	"data":{
+    		"categoryId":1,
+    		"word":"爱维德",
+    		"language":0,
+    		"description":"寓意着无论什么时候都赋予您新鲜的感觉”。AVID品牌永远是生动的、有活力的品牌，是充满生命力的活泼向导的品牌，雅妃德使用天然的材料而研发的具有差异化的机能性化妆品，可赋予肌肤纯净而健康的肤质。",
+    		"wordTranslation":"AVID",
+    		"descriptionTranslation":"It means to give you fresh feeling whenever it comes to you. AVID brand is always a lively and dynamic brand, and a brand full of vitality and lively guide. The functional cosmetics developed by AVID using natural materials can give skin pure and healthy skin.",
+    		"frequency":"888",
+    		"isShow":"1",
+    		"version":"1",
+    		"synonyms":[
+          			"AVID官网",
+          			"韩国雅妃德",
+          			"雅妃德"
+          	]
+    	  }
+      }
+
++ Response (application/json)
+    
+      {
+        "data": {
+            "id": 19,
+            "type": "nlpUserDic"
+        }
+      }
+
+### 修改[PUTCH] /nlpUserDic/{id}
++ Description
+    + [MUST] authenticated
+    + [MUST] ROLE_ADMIN
++ Request (application/json)
+    
+      {
+    	"data":{
+    		"categoryId":1,
+    		"word":"爱维德1",
+    		"language":0,
+    		"description":"寓意着无论什么时候都赋予您新鲜的感觉”。AVID品牌永远是生动的、有活力的品牌，是充满生命力的活泼向导的品牌，雅妃德使用天然的材料而研发的具有差异化的机能性化妆品，可赋予肌肤纯净而健康的肤质。",
+    		"wordTranslation":"AVID",
+    		"descriptionTranslation":"It means to give you fresh feeling whenever it comes to you. AVID brand is always a lively and dynamic brand, and a brand full of vitality and lively guide. The functional cosmetics developed by AVID using natural materials can give skin pure and healthy skin.",
+    		"frequency":"888",
+    		"isShow":"1",
+    		"version":"1",
+    		"synonyms":[
+          			"AVID官网",
+          			"韩国雅妃德",
+          			"雅妃德1"
+          	]
+    	  }
+      }
+
++ Response 200
+
+### 词典详情 (GET) /nlpUserDic{id}
++ Response 200 (application/json)
+
+      {
+        "data": {
+            "id": 19,
+            "enabled": 1,
+            "creator": 0,
+            "modifier": 0,
+            "created": "2018-11-30 17:20:22",
+            "modified": "2018-11-30 17:45:08",
+            "categoryId": 1,
+            "word": "爱维德",
+            "language": 0,
+            "description": "寓意着无论什么时候都赋予您新鲜的感觉”。AVID品牌永远是生动的、有活力的品牌，是充满生命力的活泼向导的品牌，雅妃德使用天然的材料而研发的具有差异化的机能性化妆品，可赋予肌肤纯净而健康的肤质。",
+            "wordTranslation": "AVID",
+            "descriptionTranslation": "It means to give you fresh feeling whenever it comes to you. AVID brand is always a lively and dynamic brand, and a brand full of vitality and lively guide. The functional cosmetics developed by AVID using natural materials can give skin pure and healthy skin.",
+            "frequency": 888,
+            "isShow": 1,
+            "version": 1,
+            "nlpDicCategories": {
+                "id": 1,
+                "title": "品牌"
+            },
+            "synonyms": [
+                "AVID官网",
+                "雅妃德1",
+                "韩国雅妃德"
+            ]
+        }
+      }
+
+### 词典列表 [GET] /nlpUserDic?page[number]=1&page[size]=10
++ Parameters
+     + id 
+     + title
+        + 查询示例：filter[title]=%25米饭星%25 （'%25'为'%'的转义）
+     + filter[categoryId] 词典分类id
+     + sort -modified (从新到旧) | modified(从旧到新) 
+     + isShow  0:不展示，1:展示； 有些词只用于分词词典，不需要展示
++ Request (application/json)
+    
+      {
+        "meta": {
+            "totalPages": 1,
+            "totalElements": 2,
+            "size": 10,
+            "number": 1,
+            "numberOfElements": 2,
+            "first": true,
+            "last": true,
+            "sort": null
+        },
+        "links": {
+            "self": "/nlpUserDic?page[number]=1&page[size]=10",
+            "first": "/nlpUserDic?page[number]=1&page[size]=10",
+            "last": "/nlpUserDic?page[number]=1&page[size]=10"
+        },
+        "data": [
+            {
+                "id": 4,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2018-11-29 11:21:22",
+                "modified": "2018-11-29 11:21:22",
+                "categoryId": 7,
+                "word": "米饭星",
+                "language": 0,
+                "description": "米饭星向您提供国内最大的音频产品数据中心，共有来自15+行业网站的30W+的音频设备供您检索。您可以查分类、查品牌、查价格、看图片、一站式，随时随地、每时每刻的检索您需要的音乐设备！",
+                "wordTranslation": "mifanxing",
+                "descriptionTranslation": "Rice star provides you with the largest audio product data center in China, with 30W+ audio equipment from 15+ industry websites for your retrieval.You can check the classification, check the brand, check the price, see pictures, one-stop, anytime, anywhere, all the time to search your need music equipment!",
+                "frequency": 111,
+                "isShow": 1,
+                "version": 1,
+                "nlpDicCategories": {
+                    "id": 7,
+                    "title": "音乐类..."
+                }
+            },
+            {
+                "id": 19,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2018-11-30 17:20:22",
+                "modified": "2018-11-30 17:22:35",
+                "categoryId": 1,
+                "word": "爱维德1",
+                "language": 0,
+                "description": "寓意着无论什么时候都赋予您新鲜的感觉”。AVID品牌永远是生动的、有活力的品牌，是充满生命力的活泼向导的品牌，雅妃德使用天然的材料而研发的具有差异化的机能性化妆品，可赋予肌肤纯净而健康的肤质。",
+                "wordTranslation": "AVID",
+                "descriptionTranslation": "It means to give you fresh feeling whenever it comes to you. AVID brand is always a lively and dynamic brand, and a brand full of vitality and lively guide. The functional cosmetics developed by AVID using natural materials can give skin pure and healthy skin.",
+                "frequency": 888,
+                "isShow": 1,
+                "version": 1,
+                "nlpDicCategories": {
+                    "id": 1,
+                    "title": "品牌"
+                }
+            }
+        ]
+      }
+    
+### 删除 [DELETE] /nlpUserDic/{id}
+
++ Description
+    + [MUST] authenticated
+    + [MUST] ROLE_ADMIN
++ Response 204     
+## 词典分类管理
++ Data
+    + id (Long) - ID
+    + title (String) - 分类名称
+    + enabled (int) - 0禁用 1启用
+    + creator (Long) - 创建人
+    + modifier (Long) - 修改人
+    + created (date) - 创建时间
+    + modified (date) - 修改时间
+
+### 增加 [POST] /nlpDicCategories
++ Description
+    + [MUST] authenticated
+    + [MUST] ROLE_ADMIN
+    
++ Request (application/json) 
+
+      {
+    	  "data":{
+    		"title":"品牌"
+    	  } 
+      }
+
+Response (application/json)
+
+    {
+        "data": {
+            "id": 1,
+            "type": "nlpDicCategories"
+        }
+    }
+
+### 修改 [PATCH] /nlpDicCategories/{id}
+
++ Description
+    + [MUST] authenticated
+    + [MUST] ROLE_ADMIN
+
++ Request (application/json)
+    
+      {
+        	"data":{
+        		"title":"音乐类..."
+        	}
+      } 
+
++ Response 200
+
+### 列表[GET] /nlpDicCategories
++ Parameters
+  + id 
+  + title
+     + 查询示例：filter[title]=%25品牌%25 （'%25'为'%'的转义） 
+  + sort -modified(从新到旧) | modified(从旧到新)
++ Request (application/json)
+       
+      {
+        "meta": {
+            "totalPages": 1,
+            "totalElements": 6,
+            "size": 10,
+            "number": 1,
+            "numberOfElements": 6,
+            "first": true,
+            "last": true,
+            "sort": null
+        },
+        "links": {
+            "self": "/nlpDicCategories?page[number]=1&page[size]=10",
+            "first": "/nlpDicCategories?page[number]=1&page[size]=10",
+            "last": "/nlpDicCategories?page[number]=1&page[size]=10"
+        },
+        "data": [
+            {
+                "id": 1,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2018-11-27 16:31:04",
+                "modified": "2018-11-27 16:31:04",
+                "title": "品牌"
+            },
+            {
+                "id": 2,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2018-11-27 16:31:35",
+                "modified": "2018-11-27 16:31:35",
+                "title": "厂家"
+            },
+            {
+                "id": 3,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2018-11-27 16:31:43",
+                "modified": "2018-11-27 16:31:43",
+                "title": "经销商"
+            },
+            {
+                "id": 4,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2018-11-27 16:31:55",
+                "modified": "2018-11-27 16:31:55",
+                "title": "设备名"
+            },
+            {
+                "id": 5,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2018-11-27 16:32:02",
+                "modified": "2018-11-27 16:32:02",
+                "title": "音频物理量"
+            },
+            {
+                "id": 6,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2018-11-27 16:32:09",
+                "modified": "2018-11-27 16:32:09",
+                "title": "人名"
+            }
+        ]
+      }
+       
+
+### 删除 [DELETE] /nlpDicCategories/{id}
+
++ Description
+    + [MUST] authenticated
+    + [MUST] ROLE_ADMIN
++ Response 204  
 ### 获取重复的文章 [GET] /topics/{id}/repeats?page[number]=1&page[size]=3&sort=-created
 
 + Description
