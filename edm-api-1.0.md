@@ -111,7 +111,7 @@
 
 + Response 200
 
-### 查询邮件账户列表 [GET]  /company
+### 查询邮件账户列表 [GET]  /email
     
 + Response 200 (application/json)
 
