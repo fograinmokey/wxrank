@@ -10,7 +10,7 @@
     + positionalTitles (String) - 职称
     + emailCompany (String) - 客户邮箱属于公司
     + mifanId (Long) - 米饭星id,默认为0
-    + priority  (int) - 优先级
+    + priority  (int) - 优先级 (优先级，0-低，1-中，2-高)
     + companyId  (Long) - 公司id
     + accountSource  (int) - 账号来源，(0-注册用户，1-展会用户，2-网络邮箱，3-合作伙伴)
     + retry  (int) - 重试次数
