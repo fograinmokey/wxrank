@@ -16,7 +16,7 @@
     + retry  (int) - 重试次数
     + sendCount  (int) - 是否发送 （0-未发，1-已发）
     + disableReason (String) --禁用原因
-    + enabled (int) - 是否可用
+    + enabled (int) - 是否可用（0为禁用 1为可用）
     + creator (Long)  - 创建人
     + modifier (Long) - 修改人
     + created (Date) - 创建时间
@@ -322,7 +322,7 @@
     + id (Long) - ID
     + companyName (String) - 公司名字
     + companyDesc (String) - 公司描述
-    + enabled (int) - 是否可用
+    + enabled (int) - 是否可用 0为禁用 1为可用
     + created (Date) - 创建时间
     + modified (Date) - 修改时间    
 
