@@ -593,6 +593,312 @@
 +  Response 200
 
 
++ 2018年12月13日
+     + API初始化
+     
+## 邮件管理-日志查看
++ Data
+    + id (Long) - ID 链接ID
+    + link (String) - 链接地址
+    + newsletterId (Long) - 所属期号
+    + module (String) --所属模块
+    + visitTimes  (Long) - 访问次数
+
+### 查询日志查看列表 [GET]  /log
++ Description
+  + [MUST] authenticated
+  + [MUST] ROLE_ADMIN
+
++ Parameters
+    + filter[link] (String) - 查询链接
+    + filter[module] (String) -模块(product 热门产品， weekly 热门周刊，list 大数据榜单)
+    + filter[visitTimes] (String) -排序(asc 从小到大  desc 从大到小)
+    
++ Response 200 (application/json)
+
+        {
+        "meta": {
+        "totalPages": 5,
+        "totalElements": 43,
+        "size": 10,
+        "number": 1,
+        "numberOfElements": 10,
+        "first": true,
+        "last": false,
+        "sort": null
+        },
+        "links": {
+        "self": "/log?page[number]=1&page[size]=10",
+        "first": "/log?page[number]=1&page[size]=10",
+        "next": "/log?page[number]=2&page[size]=10",
+        "last": "/log?page[number]=5&page[size]=10"
+        },
+        "data": [
+        {
+            "id": 82,
+            "newsletterId": 1,
+            "link": "http://mifanxing.cn:7778/email/unsubscribe?emailId=227",
+            "module": "product",
+            "visitTimes": 1
+        },
+        {
+            "id": 210,
+            "newsletterId": 1,
+            "link": "http://mifanxing.cn:7778/email/unsubscribe?emailId=2339",
+            "module": "product",
+            "visitTimes": 1
+        },
+        {
+            "id": 173,
+            "newsletterId": 1,
+            "link": "http://mifanxing.cn:7778/email/unsubscribe?emailId=4840",
+            "module": "product",
+            "visitTimes": 1
+        },
+        {
+            "id": 169,
+            "newsletterId": 1,
+            "link": "http://mifanxing.cn:7778/email/unsubscribe?emailId=5013",
+            "module": "product",
+            "visitTimes": 2
+        },
+        {
+            "id": 85,
+            "newsletterId": 1,
+            "link": "http://www.mifanxing.com/channel/86",
+            "visitTimes": 1
+        },
+        {
+            "id": 14,
+            "newsletterId": 1,
+            "link": "http://www.mifanxing.com/products",
+            "module": "product",
+            "visitTimes": 6
+        },
+        {
+            "id": 298,
+            "newsletterId": 1,
+            "link": "https://www.mifanxing.com/cooperation/ev50/",
+            "visitTimes": 5
+        },
+        {
+            "id": 105,
+            "newsletterId": 1,
+            "link": "https://www.mifanxing.com/p/1317870",
+            "visitTimes": 6
+        },
+        {
+            "id": 299,
+            "newsletterId": 1,
+            "link": "https://www.mifanxing.com/p/1474321",
+            "visitTimes": 2
+        },
+        {
+            "id": 50,
+            "newsletterId": 1,
+            "link": "https://www.mifanxing.com/p/1504241",
+            "visitTimes": 4
+        }
+    ]
+}
+
+
+### 查询打开率 [GET]  /log/openrate/{newsLetterId}
++ Description
+  + [MUST] authenticated
+  + [MUST] ROLE_ADMIN
+
++ Parameters
+  + newsLetterId (int) Newsletter ID   
+    
++ Response 200 (application/json)
+
+        {
+        "meta": {
+        "totalPages": 7,
+        "totalElements": 70,
+        "size": 10,
+        "number": 2,
+        "numberOfElements": 10,
+        "first": false,
+        "last": false,
+        "sort": null,
+        "sendAmount": 1223,
+        "openAmount": 47,
+        "unOpenAmount": 1176,
+        "openRate": "3.84%"
+        },
+        "links": {
+        "self": "/log/openrate/3?page[number]=2&page[size]=10",
+        "first": "/log/openrate/3?page[number]=1&page[size]=10",
+        "prev": "/log/openrate/3?page[number]=1&page[size]=10",
+        "next": "/log/openrate/3?page[number]=3&page[size]=10",
+        "last": "/log/openrate/3?page[number]=7&page[size]=10"
+        },
+        "data": [
+        {
+            "id": 727,
+            "created": "2018-12-12 17:02:32",
+            "emailId": 471,
+            "newsletterId": 3,
+            "tableDiff": 1,
+            "emailAddress": "kai.liu@budee.cn"
+        },
+        {
+            "id": 727,
+            "created": "2018-12-12 17:02:32",
+            "emailId": 471,
+            "newsletterId": 3,
+            "tableDiff": 1,
+            "emailAddress": "kai.liu@budee.cn"
+        },
+        {
+            "id": 730,
+            "created": "2018-12-12 17:04:12",
+            "emailId": 14,
+            "newsletterId": 3,
+            "tableDiff": 1,
+            "emailAddress": "zhangfei@mifanxing.com"
+        },
+        {
+            "id": 730,
+            "created": "2018-12-12 17:04:12",
+            "emailId": 14,
+            "newsletterId": 3,
+            "tableDiff": 1,
+            "emailAddress": "zhangfei@mifanxing.com"
+        },
+        {
+            "id": 731,
+            "created": "2018-12-12 17:04:26",
+            "emailId": 89,
+            "newsletterId": 3,
+            "tableDiff": 1,
+            "emailAddress": "felix@mifanxing.com"
+        },
+        {
+            "id": 731,
+            "created": "2018-12-12 17:04:26",
+            "emailId": 89,
+            "newsletterId": 3,
+            "tableDiff": 1,
+            "emailAddress": "felix@mifanxing.com"
+        },
+        {
+            "id": 735,
+            "created": "2018-12-12 17:06:43",
+            "emailId": 471,
+            "newsletterId": 3,
+            "tableDiff": 1,
+            "emailAddress": "kai.liu@budee.cn"
+        },
+        {
+            "id": 735,
+            "created": "2018-12-12 17:06:43",
+            "emailId": 471,
+            "newsletterId": 3,
+            "tableDiff": 1,
+            "emailAddress": "kai.liu@budee.cn"
+        },
+        {
+            "id": 736,
+            "created": "2018-12-12 17:08:32",
+            "emailId": 20,
+            "newsletterId": 3,
+            "tableDiff": 1,
+            "emailAddress": "lifangfang@mifanxing.com"
+        },
+        {
+            "id": 736,
+            "created": "2018-12-12 17:08:32",
+            "emailId": 20,
+            "newsletterId": 3,
+            "tableDiff": 1,
+            "emailAddress": "lifangfang@mifanxing.com"
+        },
+        {
+            "id": 742,
+            "created": "2018-12-12 17:11:22",
+            "emailId": 1,
+            "newsletterId": 3,
+            "tableDiff": 1,
+            "emailAddress": "yangchangli0010@gmail.com"
+        },
+        {
+            "id": 742,
+            "created": "2018-12-12 17:11:22",
+            "emailId": 1,
+            "newsletterId": 3,
+            "tableDiff": 1,
+            "emailAddress": "yangchangli0010@gmail.com"
+        },
+        {
+            "id": 743,
+            "created": "2018-12-12 17:11:26",
+            "emailId": 1,
+            "newsletterId": 3,
+            "tableDiff": 1,
+            "emailAddress": "yangchangli0010@gmail.com"
+        },
+        {
+            "id": 743,
+            "created": "2018-12-12 17:11:26",
+            "emailId": 1,
+            "newsletterId": 3,
+            "tableDiff": 1,
+            "emailAddress": "yangchangli0010@gmail.com"
+        },
+        {
+            "id": 744,
+            "created": "2018-12-12 17:11:29",
+            "emailId": 1,
+            "newsletterId": 3,
+            "tableDiff": 1,
+            "emailAddress": "yangchangli0010@gmail.com"
+        },
+        {
+            "id": 744,
+            "created": "2018-12-12 17:11:29",
+            "emailId": 1,
+            "newsletterId": 3,
+            "tableDiff": 1,
+            "emailAddress": "yangchangli0010@gmail.com"
+        },
+        {
+            "id": 745,
+            "created": "2018-12-12 17:11:31",
+            "emailId": 1,
+            "newsletterId": 3,
+            "tableDiff": 1,
+            "emailAddress": "yangchangli0010@gmail.com"
+        },
+        {
+            "id": 745,
+            "created": "2018-12-12 17:11:31",
+            "emailId": 1,
+            "newsletterId": 3,
+            "tableDiff": 1,
+            "emailAddress": "yangchangli0010@gmail.com"
+        },
+        {
+            "id": 752,
+            "created": "2018-12-12 17:14:27",
+            "emailId": 224,
+            "newsletterId": 3,
+            "tableDiff": 1,
+            "emailAddress": "516955562@qq.com"
+        },
+        {
+            "id": 752,
+            "created": "2018-12-12 17:14:27",
+            "emailId": 224,
+            "newsletterId": 3,
+            "tableDiff": 1,
+            "emailAddress": "516955562@qq.com"
+        }
+    ]
+}
+
 
 
 
