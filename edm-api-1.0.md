@@ -81,7 +81,7 @@
 + Response 200  (application/json)
 
 
-### 查询公司详情 [GET] /email/{id}
+### 查询email详情 [GET] /email/{id}
 + Parameters
     + id 
     
@@ -411,6 +411,15 @@
 + Response 200
 
 ### 查询公司列表 [GET]  /company
++ Description
+  + [MUST] authenticated
+  + [MUST] ROLE_ADMIN
+
++ Parameters
+    + page[number] (int)  页码
+    + page[size]  (int)   页尺
+    + filter[id] (Long)   公司ID
+    + filter[companyName] (String) 公司名字
     
 + Response 200 (application/json)
 
