@@ -20,7 +20,8 @@
     + creator (Long)  - 创建人
     + modifier (Long) - 修改人
     + created (Date) - 创建时间
-    + modified (Date) - 修改时间    
+    + modified (Date) - 修改时间 
+    + visitLink (Long) - 链接访问数
 
 ### 增加 [POST] /email
 + Description
@@ -112,13 +113,25 @@
 + Response 200
 
 ### 查询邮件账户列表 [GET]  /email
++ Description
+  + [MUST] authenticated
+  + [MUST] ROLE_ADMIN
+
++ Parameters
+    + page[number] (int)  页码
+    + page[size]  (int)   页尺
+    + filter[emailId] (Long)   Email ID
+    + filter[emailAddr] (String) Email Address
+    + filter[companyId] (Long)  公司ID
+    + filter[priority] (Integer)  优先级(0-低，1-中，2-高)
+    + filter[enabled] (Integer)  是否可用(1-启用，0-禁用)
     
 + Response 200 (application/json)
 
         {
         "meta": {
-        "totalPages": 45,
-        "totalElements": 447,
+        "totalPages": 42,
+        "totalElements": 413,
         "size": 10,
         "number": 1,
         "numberOfElements": 10,
@@ -127,10 +140,10 @@
         "sort": null
         },
         "links": {
-        "self": "/email?page[number]=1&page[size]=10",
-        "first": "/email?page[number]=1&page[size]=10",
-        "next": "/email?page[number]=2&page[size]=10",
-        "last": "/email?page[number]=45&page[size]=10"
+        "self": "/email?filter[enabled]=1&page[number]=1&page[size]=10",
+        "first": "/email?filter[enabled]=1&page[number]=1&page[size]=10",
+        "next": "/email?filter[enabled]=1&page[number]=2&page[size]=10",
+        "last": "/email?filter[enabled]=1&page[number]=42&page[size]=10"
         },
         "data": [
         {
@@ -151,7 +164,8 @@
             "priority": 1,
             "companyId": 1,
             "accountSource": 0,
-            "companyName": "mm"
+            "companyName": "mm",
+            "visitLink": 0
         },
         {
             "id": 2,
@@ -167,7 +181,8 @@
             "priority": 1,
             "companyId": 1,
             "accountSource": 0,
-            "companyName": "mm"
+            "companyName": "mm",
+            "visitLink": 0
         },
         {
             "id": 3,
@@ -183,7 +198,8 @@
             "priority": 1,
             "companyId": 1,
             "accountSource": 0,
-            "companyName": "mm"
+            "companyName": "mm",
+            "visitLink": 0
         },
         {
             "id": 4,
@@ -200,7 +216,8 @@
             "priority": 1,
             "companyId": 1,
             "accountSource": 0,
-            "companyName": "mm"
+            "companyName": "mm",
+            "visitLink": 18
         },
         {
             "id": 5,
@@ -216,7 +233,8 @@
             "priority": 1,
             "companyId": 1,
             "accountSource": 0,
-            "companyName": "mm"
+            "companyName": "mm",
+            "visitLink": 0
         },
         {
             "id": 6,
@@ -232,24 +250,8 @@
             "priority": 1,
             "companyId": 1,
             "accountSource": 0,
-            "companyName": "mm"
-        },
-        {
-            "id": 8,
-            "enabled": 0,
-            "creator": 0,
-            "modifier": 0,
-            "created": "2018-10-22 16:11:25",
-            "modified": "2018-11-23 15:37:26",
-            "email": "kai.liu007@qq.com",
-            "sendCount": 0,
-            "retry": 0,
-            "disableReason": "",
-            "mifanId": 0,
-            "priority": 1,
-            "companyId": 1,
-            "accountSource": 0,
-            "companyName": "mm"
+            "companyName": "mm",
+            "visitLink": 0
         },
         {
             "id": 9,
@@ -265,7 +267,8 @@
             "priority": 1,
             "companyId": 1,
             "accountSource": 0,
-            "companyName": "mm"
+            "companyName": "mm",
+            "visitLink": 6
         },
         {
             "id": 10,
@@ -281,7 +284,8 @@
             "priority": 1,
             "companyId": 1,
             "accountSource": 0,
-            "companyName": "mm"
+            "companyName": "mm",
+            "visitLink": 0
         },
         {
             "id": 12,
@@ -297,10 +301,28 @@
             "priority": 1,
             "companyId": 1,
             "accountSource": 0,
-            "companyName": "mm"
+            "companyName": "mm",
+            "visitLink": 7
+        },
+        {
+            "id": 13,
+            "enabled": 1,
+            "creator": 0,
+            "modifier": 0,
+            "created": "2018-10-23 14:00:10",
+            "modified": "2018-12-05 14:04:03",
+            "email": "zhangxinya@mifanxing.com",
+            "sendCount": 1,
+            "retry": 0,
+            "mifanId": 0,
+            "priority": 1,
+            "companyId": 1,
+            "accountSource": 0,
+            "companyName": "mm",
+            "visitLink": 0
         }
     ]
-}
+} 
 
 
 
