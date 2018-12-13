@@ -523,3 +523,76 @@
 +  Response 200
 
 
+
+## 邮件管理 -NewsLetter
++ Data
+    + id (Long) - ID
+    + subject (String) - 邮件主题
+    + newsletterLink (String) - 邮件内容链接
+    + created (Date) - 创建时间
+    + modified (Date) - 修改时间    
+
+### 增加 [POST] /newsletter
+### 修改 [PATCH] /newsletter/{id} 
+### 查询newsletter详情 [GET] /newsletter/{id}
+### 查询newsletter列表 [GET]  /newsletter
++ Description
+  + [MUST] authenticated
+  + [MUST] ROLE_ADMIN
+
++ Parameters
+    + page[number] (int)  页码
+    + page[size]  (int)   页尺
++ Response 200 (application/json)
+
+        {
+        "meta": {
+        "totalPages": 1,
+        "totalElements": 3,
+        "size": 10,
+        "number": 1,
+        "numberOfElements": 3,
+        "first": true,
+        "last": true,
+        "sort": null
+        },
+        "links": {
+        "self": "/newsletter?page[number]=1&page[size]=10",
+        "first": "/newsletter?page[number]=1&page[size]=10",
+        "last": "/newsletter?page[number]=1&page[size]=10"
+        },
+        "data": [
+        {
+            "id": 1,
+            "created": "2018-11-12 16:42:00",
+            "modified": "2018-11-12 16:42:00",
+            "newsletterLink": "http://www.mifanxing.com/api/wxrank/newsletter/index/1?templateNo=1",
+            "subject": "音视频行业每周精要"
+        },
+            {
+            "id": 2,
+            "created": "2018-12-05 13:29:27",
+            "modified": "2018-12-05 13:29:31",
+            "newsletterLink": "http://www.mifanxing.com/api/wxrank/newsletter/index/2?templateNo=1",
+            "subject": "音视频行业每周精要"
+        },
+            {
+            "id": 3,
+            "created": "2018-12-11 09:46:46",
+            "modified": "2018-12-11 09:46:48",
+            "newsletterLink": "http://www.mifanxing.com/api/wxrank/newsletter/index/3?templateNo=1",
+            "subject": "音视频行业每周精要"
+        }
+    ]
+}
+
+### 删除 [DELETE] /newsletter/{id}
++ Description
+  + [MUST]  Authenticated
+  + [MUST] ROLE_ADMIN 
++  Response 200
+
+
+
+
+
