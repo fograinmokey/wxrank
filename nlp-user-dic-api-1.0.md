@@ -218,36 +218,20 @@
         ]
       }
     
+### 增加用户搜索词 [POST] /nlpDicSearch
++ Parameters
+    +  word 用户在搜索框中要输入的词条，搜索的同时进行保存
++ Request (application/json)
+    
+      {
+        "data":{
+  	    "word":"大海"
+        } 
+      }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
++ Response (application/json)
+    
+      {
+        "data": 200
+      }
 
