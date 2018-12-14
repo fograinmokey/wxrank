@@ -6,11 +6,12 @@
 + 2018年11月30日
     +  词典管理初始化
     +  词典分类初始化
-## 词典管理 
+## 词典管理
 + Data
     + NlpUserDic 词典表
         + id (Long) - ID
         + categoryId (Long) - 分类
+        + logo - 词条logo
         + word (String) - 词
         + language (int) -  0:中文; 1:英文
         + description (String) - 描述
@@ -39,6 +40,7 @@
       {
     	"data":{
     		"categoryId":1,
+              "logo": "//static.mifanxing.com/iyyren/image/201806/06/1638/347865732702420992.jpg",
     		"word":"爱维德",
     		"language":0,
     		"description":"寓意着无论什么时候都赋予您新鲜的感觉”。AVID品牌永远是生动的、有活力的品牌，是充满生命力的活泼向导的品牌，雅妃德使用天然的材料而研发的具有差异化的机能性化妆品，可赋予肌肤纯净而健康的肤质。",
@@ -73,6 +75,7 @@
       {
     	"data":{
     		"categoryId":1,
+              "logo": "//static.mifanxing.com/iyyren/image/201806/06/1638/347865732702420992.jpg",
     		"word":"爱维德1",
     		"language":0,
     		"description":"寓意着无论什么时候都赋予您新鲜的感觉”。AVID品牌永远是生动的、有活力的品牌，是充满生命力的活泼向导的品牌，雅妃德使用天然的材料而研发的具有差异化的机能性化妆品，可赋予肌肤纯净而健康的肤质。",
@@ -103,6 +106,7 @@
             "created": "2018-11-30 17:20:22",
             "modified": "2018-11-30 17:45:08",
             "categoryId": 1,
+            "logo": "//static.mifanxing.com/iyyren/image/201806/06/1638/347865732702420992.jpg",
             "word": "爱维德",
             "language": 0,
             "description": "寓意着无论什么时候都赋予您新鲜的感觉”。AVID品牌永远是生动的、有活力的品牌，是充满生命力的活泼向导的品牌，雅妃德使用天然的材料而研发的具有差异化的机能性化妆品，可赋予肌肤纯净而健康的肤质。",
@@ -158,6 +162,7 @@
                 "created": "2018-11-29 11:21:22",
                 "modified": "2018-11-29 11:21:22",
                 "categoryId": 7,
+                "logo": "//static.mifanxing.com/iyyren/image/201806/06/1638/347865732702420992.jpg",
                 "word": "米饭星",
                 "language": 0,
                 "description": "米饭星向您提供国内最大的音频产品数据中心，共有来自15+行业网站的30W+的音频设备供您检索。您可以查分类、查品牌、查价格、看图片、一站式，随时随地、每时每刻的检索您需要的音乐设备！",
@@ -200,7 +205,7 @@
 + Description
     + [MUST] authenticated
     + [MUST] ROLE_ADMIN
-+ Response 204     
++ Response 204    
 ## 词典分类管理
 + Data
     + id (Long) - ID
