@@ -1103,7 +1103,7 @@
     + id (Long) - ID
     + emailAddress (String) - email地址
     + content (String) -回复内容
-    + created (String) -回复时间
+    + backReversion (String) -回复时间
   
     
 + Description
