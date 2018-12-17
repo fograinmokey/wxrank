@@ -703,201 +703,453 @@
 }
 
 
-### 查询打开率 [GET]  /log/openrate/{newsLetterId}
+
+
+### 查询汇总(打开率,回复率，送达率) [GET]  /log/summarize/{newsLetterId}
++ Data
+    + sendAmount (Long)  实际发送数量
+    + deliveryFailAmount (Long)  发送失败数量
+    + sendSuccessAmount (Long)  发送成功数量
+    + deliverability (double) 送达率
+    + openCount (Long)  打开数量
+    + noOpenCount (Long)  未打开数量
+    + openRate (double) 打开率
+    + reversionCount (Long) 回复数量
+    + noReversionCount (Long) 没有回复数量
+    + reversionRate  (Double) 回复率
+    + id (Long) - ID 链接ID
+    + link (String) - 链接地址
+    + module (String) --所属模块（weekly 热门周刊，product 热门产品，list 大数据榜单）
+    + visitTimes  (Long) - 访问次数
+
 + Description
   + [MUST] authenticated
   + [MUST] ROLE_ADMIN
 
 + Parameters
-  + newsLetterId (int) Newsletter ID   
+    + newsLetterId (int) Newsletter ID   
     
 + Response 200 (application/json)
 
         {
         "meta": {
-        "totalPages": 7,
-        "totalElements": 70,
+        "totalPages": 1,
+        "totalElements": 3,
         "size": 10,
-        "number": 2,
-        "numberOfElements": 10,
-        "first": false,
-        "last": false,
+        "number": 1,
+        "numberOfElements": 3,
+        "first": true,
+        "last": true,
         "sort": null,
-        "sendAmount": 1223,
-        "openAmount": 47,
-        "unOpenAmount": 1176,
-        "openRate": "3.84%"
+        "sendAmount": 5219,
+        "deliveryFailAmount": 1,
+        "sendSuccessAmount": 5218,
+        "deliverability": "99.98%",
+        "openCount": 86,
+        "noOpenCount": 5133,
+        "openRate": "1.65%",
+        "reversionCount": 1,
+        "noReversionCount": 5218,
+        "reversionRate": "0.02%"
         },
         "links": {
-        "self": "/log/openrate/3?page[number]=2&page[size]=10",
-        "first": "/log/openrate/3?page[number]=1&page[size]=10",
-        "prev": "/log/openrate/3?page[number]=1&page[size]=10",
-        "next": "/log/openrate/3?page[number]=3&page[size]=10",
-        "last": "/log/openrate/3?page[number]=7&page[size]=10"
+        "self": "/log/deliverability/3?page[number]=1&page[size]=10",
+        "first": "/log/deliverability/3?page[number]=1&page[size]=10",
+        "last": "/log/deliverability/3?page[number]=1&page[size]=10"
         },
         "data": [
         {
-            "id": 727,
-            "created": "2018-12-12 17:02:32",
-            "emailId": 471,
-            "newsletterId": 3,
-            "tableDiff": 1,
-            "emailAddress": "kai.liu@budee.cn"
+            "id": 1,
+            "created": "2018-12-17 11:37:59",
+            "period": 3,
+            "link": "https://www.mifanxing.com/p/1538018?module=weekly",
+            "module": "weekly",
+            "visitTimes": 14
         },
         {
-            "id": 727,
-            "created": "2018-12-12 17:02:32",
-            "emailId": 471,
-            "newsletterId": 3,
-            "tableDiff": 1,
-            "emailAddress": "kai.liu@budee.cn"
+            "id": 2,
+            "created": "2018-12-17 11:38:19",
+            "period": 3,
+            "link": "https://www.mifanxing.com/p/1535346?module=list",
+            "module": "list",
+            "visitTimes": 4
         },
         {
-            "id": 730,
-            "created": "2018-12-12 17:04:12",
-            "emailId": 14,
-            "newsletterId": 3,
-            "tableDiff": 1,
-            "emailAddress": "zhangfei@mifanxing.com"
-        },
-        {
-            "id": 730,
-            "created": "2018-12-12 17:04:12",
-            "emailId": 14,
-            "newsletterId": 3,
-            "tableDiff": 1,
-            "emailAddress": "zhangfei@mifanxing.com"
-        },
-        {
-            "id": 731,
-            "created": "2018-12-12 17:04:26",
-            "emailId": 89,
-            "newsletterId": 3,
-            "tableDiff": 1,
-            "emailAddress": "felix@mifanxing.com"
-        },
-        {
-            "id": 731,
-            "created": "2018-12-12 17:04:26",
-            "emailId": 89,
-            "newsletterId": 3,
-            "tableDiff": 1,
-            "emailAddress": "felix@mifanxing.com"
-        },
-        {
-            "id": 735,
-            "created": "2018-12-12 17:06:43",
-            "emailId": 471,
-            "newsletterId": 3,
-            "tableDiff": 1,
-            "emailAddress": "kai.liu@budee.cn"
-        },
-        {
-            "id": 735,
-            "created": "2018-12-12 17:06:43",
-            "emailId": 471,
-            "newsletterId": 3,
-            "tableDiff": 1,
-            "emailAddress": "kai.liu@budee.cn"
-        },
-        {
-            "id": 736,
-            "created": "2018-12-12 17:08:32",
-            "emailId": 20,
-            "newsletterId": 3,
-            "tableDiff": 1,
-            "emailAddress": "lifangfang@mifanxing.com"
-        },
-        {
-            "id": 736,
-            "created": "2018-12-12 17:08:32",
-            "emailId": 20,
-            "newsletterId": 3,
-            "tableDiff": 1,
-            "emailAddress": "lifangfang@mifanxing.com"
-        },
-        {
-            "id": 742,
-            "created": "2018-12-12 17:11:22",
-            "emailId": 1,
-            "newsletterId": 3,
-            "tableDiff": 1,
-            "emailAddress": "yangchangli0010@gmail.com"
-        },
-        {
-            "id": 742,
-            "created": "2018-12-12 17:11:22",
-            "emailId": 1,
-            "newsletterId": 3,
-            "tableDiff": 1,
-            "emailAddress": "yangchangli0010@gmail.com"
-        },
-        {
-            "id": 743,
-            "created": "2018-12-12 17:11:26",
-            "emailId": 1,
-            "newsletterId": 3,
-            "tableDiff": 1,
-            "emailAddress": "yangchangli0010@gmail.com"
-        },
-        {
-            "id": 743,
-            "created": "2018-12-12 17:11:26",
-            "emailId": 1,
-            "newsletterId": 3,
-            "tableDiff": 1,
-            "emailAddress": "yangchangli0010@gmail.com"
-        },
-        {
-            "id": 744,
-            "created": "2018-12-12 17:11:29",
-            "emailId": 1,
-            "newsletterId": 3,
-            "tableDiff": 1,
-            "emailAddress": "yangchangli0010@gmail.com"
-        },
-        {
-            "id": 744,
-            "created": "2018-12-12 17:11:29",
-            "emailId": 1,
-            "newsletterId": 3,
-            "tableDiff": 1,
-            "emailAddress": "yangchangli0010@gmail.com"
-        },
-        {
-            "id": 745,
-            "created": "2018-12-12 17:11:31",
-            "emailId": 1,
-            "newsletterId": 3,
-            "tableDiff": 1,
-            "emailAddress": "yangchangli0010@gmail.com"
-        },
-        {
-            "id": 745,
-            "created": "2018-12-12 17:11:31",
-            "emailId": 1,
-            "newsletterId": 3,
-            "tableDiff": 1,
-            "emailAddress": "yangchangli0010@gmail.com"
-        },
-        {
-            "id": 752,
-            "created": "2018-12-12 17:14:27",
-            "emailId": 224,
-            "newsletterId": 3,
-            "tableDiff": 1,
-            "emailAddress": "516955562@qq.com"
-        },
-        {
-            "id": 752,
-            "created": "2018-12-12 17:14:27",
-            "emailId": 224,
-            "newsletterId": 3,
-            "tableDiff": 1,
-            "emailAddress": "516955562@qq.com"
+            "id": 3,
+            "created": "2018-12-17 11:40:29",
+            "period": 3,
+            "link": "https://www.mifanxing.com/cooperation/ev50/?module=product",
+            "module": "product",
+            "visitTimes": 2
         }
-    ]
-}
+        ]
+        }
+
+
+
+
+### 查询打开率 [GET]  /log/openrate/{newsLetterId}
++ Data
+    + sendAmount (Long)  实际发送数量
+    + openCount (Long)  打开数量
+    + noOpenCount (Long)  未打开数量
+    + openRate (double) 打开率
+    + emailId (Long) - 邮箱ID
+    + emailAddress (String) - email地址
+    + created (String) -打开时间
+    
+
++ Description
+  + [MUST] authenticated
+  + [MUST] ROLE_ADMIN
+
++ Parameters
+    + newsLetterId (int) Newsletter ID   
+    
++ Response 200 (application/json)
+
+        {
+        "meta": {
+        "totalPages": 15,
+        "totalElements": 144,
+        "size": 10,
+        "number": 1,
+        "numberOfElements": 10,
+        "first": true,
+        "last": false,
+        "sort": null,
+        "sendAmount": 5219,
+        "openAmount": 86,
+        "noOpenCount": 5133,
+        "openRate": "1.65%"
+        },
+        "links": {
+        "self": "/log/openrate/3?page[number]=1&page[size]=10",
+        "first": "/log/openrate/3?page[number]=1&page[size]=10",
+        "next": "/log/openrate/3?page[number]=2&page[size]=10",
+        "last": "/log/openrate/3?page[number]=15&page[size]=10"
+        },
+        "data": [
+        {
+            "id": 707,
+            "created": "2018-12-12 16:53:41",
+            "emailId": 4,
+            "newsletterId": 3,
+            "tableDiff": 1,
+            "emailAddress": "1223944885@qq.com"
+        },
+        {
+            "id": 712,
+            "created": "2018-12-12 16:58:35",
+            "emailId": 84,
+            "newsletterId": 3,
+            "tableDiff": 1,
+            "emailAddress": "850770722@qq.com"
+        },
+        {
+            "id": 715,
+            "created": "2018-12-12 16:58:46",
+            "emailId": 19,
+            "newsletterId": 3,
+            "tableDiff": 1,
+            "emailAddress": "zhangtengli@mifanxing.com"
+        },
+        {
+            "id": 715,
+            "created": "2018-12-12 16:58:46",
+            "emailId": 19,
+            "newsletterId": 3,
+            "tableDiff": 1,
+            "emailAddress": "zhangtengli@mifanxing.com"
+        },
+        {
+            "id": 718,
+            "created": "2018-12-12 17:00:10",
+            "emailId": 84,
+            "newsletterId": 3,
+            "tableDiff": 1,
+            "emailAddress": "850770722@qq.com"
+        },
+        {
+            "id": 718,
+            "created": "2018-12-12 17:00:10",
+            "emailId": 84,
+            "newsletterId": 3,
+            "tableDiff": 1,
+            "emailAddress": "850770722@qq.com"
+        },
+        {
+            "id": 720,
+            "created": "2018-12-12 17:00:31",
+            "emailId": 84,
+            "newsletterId": 3,
+            "tableDiff": 1,
+            "emailAddress": "850770722@qq.com"
+        },
+        {
+            "id": 720,
+            "created": "2018-12-12 17:00:31",
+            "emailId": 84,
+            "newsletterId": 3,
+            "tableDiff": 1,
+            "emailAddress": "850770722@qq.com"
+        },
+        {
+            "id": 727,
+            "created": "2018-12-12 17:02:32",
+            "emailId": 471,
+            "newsletterId": 3,
+            "tableDiff": 1,
+            "emailAddress": "kai.liu@budee.cn"
+        },
+        {
+            "id": 727,
+            "created": "2018-12-12 17:02:32",
+            "emailId": 471,
+            "newsletterId": 3,
+            "tableDiff": 1,
+            "emailAddress": "kai.liu@budee.cn"
+        }
+        ]
+        }
+
+### 查询送达率 [GET]  /log/deliverability/{newsLetterId}/1  (送达成功)
++ Data
+    + sendAmount (Long)  实际发送数量
+    + deliverySuccessAmount (Long)  送达成功数量
+    + deliveryFailAmount (Long)  送达失败数量
+    + deliverability (Double) 送达率
+    + emailId (Long) - 邮箱ID
+    + emailAddress (String) - email地址
+    + created (String) -送达时间
+    
+
++ Description
+  + [MUST] authenticated
+  + [MUST] ROLE_ADMIN
+
++ Parameters
+    + newsLetterId (int) Newsletter ID   
+    
++ Response 200 (application/json)
+
+        {
+        "meta": {
+        "totalPages": 522,
+        "totalElements": 5218,
+        "size": 10,
+        "number": 1,
+        "numberOfElements": 10,
+        "first": true,
+        "last": false,
+        "sort": null,
+        "sendAmount": 5219,
+        "deliveryFailAmount": 1,
+        "deliverySuccessAmount": 5218,
+        "deliverability": "99.98%"
+        },
+        "links": {
+        "self": "/log/deliverability/3/1?page[number]=1&page[size]=10",
+        "first": "/log/deliverability/3/1?page[number]=1&page[size]=10",
+        "next": "/log/deliverability/3/1?page[number]=2&page[size]=10",
+        "last": "/log/deliverability/3/1?page[number]=522&page[size]=10"
+        },
+        "data": [
+        {
+            "id": 1,
+            "created": "2018-12-12 16:53:26",
+            "newsletterId": 3,
+            "emailId": 166,
+            "companyId": 1,
+            "tableDiff": 1,
+            "emailAddress": "romaholidays@foxmail.com"
+        },
+        {
+            "id": 1,
+            "created": "2018-12-12 16:53:26",
+            "newsletterId": 3,
+            "emailId": 166,
+            "companyId": 1,
+            "tableDiff": 1,
+            "emailAddress": "romaholidays@foxmail.com"
+        },
+        {
+            "id": 2,
+            "created": "2018-12-12 16:53:26",
+            "newsletterId": 3,
+            "emailId": 5,
+            "companyId": 1,
+            "tableDiff": 1,
+            "emailAddress": "17085145710@163.com"
+        },
+        {
+            "id": 2,
+            "created": "2018-12-12 16:53:26",
+            "newsletterId": 3,
+            "emailId": 5,
+            "companyId": 1,
+            "tableDiff": 1,
+            "emailAddress": "17085145710@163.com"
+        },
+        {
+            "id": 3,
+            "created": "2018-12-12 16:53:27",
+            "newsletterId": 3,
+            "emailId": 79,
+            "companyId": 1,
+            "tableDiff": 1,
+            "emailAddress": "fuzhian@126.com"
+        },
+        {
+            "id": 3,
+            "created": "2018-12-12 16:53:27",
+            "newsletterId": 3,
+            "emailId": 79,
+            "companyId": 1,
+            "tableDiff": 1,
+            "emailAddress": "fuzhian@126.com"
+        },
+        {
+            "id": 4,
+            "created": "2018-12-12 16:53:27",
+            "newsletterId": 3,
+            "emailId": 2,
+            "companyId": 1,
+            "tableDiff": 1,
+            "emailAddress": "yangchangli@mifanxing.com"
+        },
+        {
+            "id": 4,
+            "created": "2018-12-12 16:53:27",
+            "newsletterId": 3,
+            "emailId": 2,
+            "companyId": 1,
+            "tableDiff": 1,
+            "emailAddress": "yangchangli@mifanxing.com"
+        },
+        {
+            "id": 10,
+            "created": "2018-12-12 16:53:37",
+            "newsletterId": 3,
+            "emailId": 21,
+            "companyId": 1,
+            "tableDiff": 1,
+            "emailAddress": "050100cui@163.com"
+        }
+        ]
+        }
+
+### 查询送达率失败 [GET]  /log/deliverability/{newsLetterId}/0  (送达失败)
++ Data
+    + sendAmount (Long)  实际发送数量
+    + deliverySuccessAmount (Long)  送达成功数量
+    + deliveryFailAmount (Long)  送达失败数量
+    + deliverability (Double) 送达率
+    + emailId (Long) - 邮箱ID
+    + emailAddress (String) - email地址
+    + content (String) -失败原因
+    
+
++ Description
+  + [MUST] authenticated
+  + [MUST] ROLE_ADMIN
+
++ Parameters
+    + newsLetterId (int) Newsletter ID   
+    
++ Response 200 (application/json)
+
+        {
+        "meta": {
+        "totalPages": 1,
+        "totalElements": 1,
+        "size": 10,
+        "number": 1,
+        "numberOfElements": 1,
+        "first": true,
+        "last": true,
+        "sort": null,
+        "sendAmount": 5219,
+        "deliveryFailAmount": 1,
+        "deliverySuccessAmount": 5218,
+        "deliverability": "99.98%"
+        },
+        "links": {
+        "self": "/log/deliverability/3/0?page[number]=1&page[size]=10",
+        "first": "/log/deliverability/3/0?page[number]=1&page[size]=10",
+        "last": "/log/deliverability/3/0?page[number]=1&page[size]=10"
+        },
+        "data": [
+        {
+            "id": 2,
+            "created": "2018-12-17 11:35:17",
+            "type": 0,
+            "tableDiff": 2,
+            "emailId": 0,
+            "newsletterId": 3,
+            "edmLogId": 2334,
+            "content": "1",
+            "backReversion": 1545017699000
+        }
+        ]
+        }
+        
+### 查询回复率 [GET]  /log/reversionrate/{newsLetterId}
++ Data
+    + sendAmount (Long)  实际发送数量
+    + reversionCount (Long)  回复数量
+    + noReversionCount (Long)  没有回复数量
+    + reversionRate (Double) 回复率率
+    + id (Long) - ID
+    + emailAddress (String) - email地址
+    + content (String) -回复内容
+    + created (String) -回复时间
+  
+    
++ Description
+  + [MUST] authenticated
+  + [MUST] ROLE_ADMIN
+
++ Parameters
+    + newsLetterId (int) Newsletter ID   
+    
++ Response 200 (application/json)
+
+        {
+        "meta": {
+        "totalPages": 1,
+        "totalElements": 1,
+        "size": 10,
+        "number": 1,
+        "numberOfElements": 1,
+        "first": true,
+        "last": true,
+        "sort": null,
+        "sendAmount": 5219,
+        "reversionCount": 1,
+        "noReversionCount": 5218,
+        "reversionRate": "0.02%"
+        },
+        "links": {
+        "self": "/log/deliverability/3?page[number]=1&page[size]=10",
+        "first": "/log/deliverability/3?page[number]=1&page[size]=10",
+        "last": "/log/deliverability/3?page[number]=1&page[size]=10"
+        },
+        "data": [
+        {
+            "id": 1,
+            "created": "2018-12-17 11:34:28",
+            "type": 1,
+            "tableDiff": 1,
+            "emailId": 1,
+            "newsletterId": 3,
+            "edmLogId": 233,
+            "content": "22",
+            "backReversion": 1545017663000,
+            "emailAddress": "yangchangli0010@gmail.com"
+        }
+        ]
+        }
 
 
 
