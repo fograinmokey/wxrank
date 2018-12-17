@@ -753,9 +753,9 @@
         "reversionRate": "0.02%"
         },
         "links": {
-        "self": "/log/deliverability/3?page[number]=1&page[size]=10",
-        "first": "/log/deliverability/3?page[number]=1&page[size]=10",
-        "last": "/log/deliverability/3?page[number]=1&page[size]=10"
+        "self": "/log/summarize/3?page[number]=1&page[size]=10",
+        "first": "/log/summarize/3?page[number]=1&page[size]=10",
+        "last": "/log/summarize/3?page[number]=1&page[size]=10"
         },
         "data": [
         {
@@ -1131,9 +1131,9 @@
         "reversionRate": "0.02%"
         },
         "links": {
-        "self": "/log/deliverability/3?page[number]=1&page[size]=10",
-        "first": "/log/deliverability/3?page[number]=1&page[size]=10",
-        "last": "/log/deliverability/3?page[number]=1&page[size]=10"
+        "self": "/log/reversionrate/3?page[number]=1&page[size]=10",
+        "first": "/log/reversionrate/3?page[number]=1&page[size]=10",
+        "last": "/log/reversionrate/3?page[number]=1&page[size]=10"
         },
         "data": [
         {
