@@ -39,11 +39,6 @@
       {
         "data": [
             {
-                "id": 8213,
-                "categoryId": 1,
-                "word": "高频"
-            },
-            {
                 "id": 13329,
                 "categoryId": 3,
                 "word": "高照光电"
