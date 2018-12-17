@@ -1151,6 +1151,202 @@
         ]
         }
 
++ 2018年12月17日
+     + API初始化
+
+## 邮件管理 -NewsLetterProduct
++ Data
+    + id (Long) - ID
+    + newsLetterId (Long) - 邮件ID
+    + title (String) - 产品名
+    + description (String)  -产品描述
+    + url (String)  -产品链接
+    + created (Date) - 创建时间
+    + modified (Date) - 修改时间    
+
+### 增加 [POST] /nlproduct
++ Description
+  + [MUST] authenticated
+  + [MUST] ROLE_ADMIN
+
++ Parameters
+    + newsLetterId (Long) 必填
+    + title (String) - 必填
+    + description (String)  -必填
+    + url (String)  -必填
+    
++ Request  (application/json)
+
+        {
+        "data": 
+            {
+            "newsLetterId": 121,
+            "title": "EV EVOLVE 50",
+            "description": "便携式音柱系111统",
+            "url": "https://www.mifanxing.com/cooperation/ev50/"
+            }
+        }
++ Response 200 
 
 
+### 修改 [PATCH] /nlproduct/{id} 
++ Description
+  + [MUST] authenticated
+  + [MUST] ROLE_ADMIN
 
++ Parameters
+    + newsLetterId (Long) 必填
+    + title (String) - 必填
+    + description (String)  -必填
+    + url (String)  -必填
+
++ Request (application/json)
++ 
+
+         {
+        "data": 
+            {
+            "id":14
+            "newsLetterId": 121,
+            "title": "EV EVOLVE 50",
+            "description": "便携式音柱系111统",
+            "url": "https://www.mifanxing.com/cooperation/ev50/"
+            }
+        }
+
++ Response 200 
+
+
+### 查询newsletterProduct详情 [GET] /nlproduct/{id}
++ Parameters
+    + id 
+    
++ Request (application/json)
+       
+        {
+        "data": {
+        "created": "2018-11-16 11:45:49",
+        "modified": "2018-11-16 11:45:53",
+        "description": "便携式音柱系统",
+        "title": "EV EVOLVE 50",
+        "url": "https://www.mifanxing.com/cooperation/ev50/"
+        }
+        }
+
+
+### 查询newsletteProductr列表 [GET]  https://www.mifanxing.com/api/wxrank/nlproduct
++ Parameters
+    + page[number] (int)  页码
+    + page[size]  (int)   页尺
+    + filter[id]  (int)   产品ID
+    + filter[productName] (String)  产品名字 
+     
+    
++ Response 200 (application/json)
+
+        {
+        "meta": {
+        "totalPages": 1,
+        "totalElements": 9,
+        "size": 10,
+        "number": 1,
+        "numberOfElements": 9,
+        "first": true,
+        "last": true,
+        "sort": null
+        },
+        "links": {
+        "self": "/nlproduct?page[number]=1&page[size]=10",
+        "first": "/nlproduct?page[number]=1&page[size]=10",
+        "last": "/nlproduct?page[number]=1&page[size]=10"
+        },
+        "data": [
+        {
+            "id": 1,
+            "created": "2018-11-16 11:45:49",
+            "modified": "2018-11-16 11:45:53",
+            "newsLetterId": 1,
+            "title": "EV EVOLVE 50",
+            "description": "便携式音柱系统",
+            "url": "https://www.mifanxing.com/cooperation/ev50/"
+        },
+        {
+            "id": 2,
+            "created": "2018-11-16 11:46:35",
+            "modified": "2018-11-16 11:46:37",
+            "newsLetterId": 1,
+            "title": "PreSonus StudioLive三代调音台",
+            "description": "集调音和录音功能于一身 - PreSonus推出第三代数字调音台产品StudioLive III",
+            "url": "https://www.mifanxing.com/p/1317870"
+        },
+        {
+            "id": 3,
+            "created": "2018-11-16 11:47:08",
+            "modified": "2018-11-16 11:47:10",
+            "newsLetterId": 1,
+            "title": "IXI MEGA M8音频接口",
+            "description": "针对日益庞大的专业个人工作室和直播市场",
+            "url": "https://www.mifanxing.com/p/1474321"
+        },
+        {
+            "id": 4,
+            "created": "2018-12-05 13:26:45",
+            "modified": "2018-12-05 13:26:48",
+            "newsLetterId": 2,
+            "title": "EV EVOLVE 50",
+            "description": "便携式音柱系统",
+            "url": "https://www.mifanxing.com/cooperation/ev50/"
+        },
+        {
+            "id": 5,
+            "created": "2018-12-05 13:27:41",
+            "modified": "2018-12-05 13:27:45",
+            "newsLetterId": 2,
+            "title": "PreSonus StudioLive三代调音台",
+            "description": "集调音和录音功能于一身 - PreSonus推出第三代数字调音台产品StudioLive III",
+            "url": "https://www.mifanxing.com/p/1317870"
+        },
+        {
+            "id": 6,
+            "created": "2018-12-05 13:28:11",
+            "modified": "2018-12-05 13:28:15",
+            "newsLetterId": 2,
+            "title": "IXI MEGA M8音频接口",
+            "description": "针对日益庞大的专业个人工作室和直播市场",
+            "url": "https://www.mifanxing.com/p/1474321"
+        },
+        {
+            "id": 7,
+            "created": "2018-12-12 16:05:26",
+            "modified": "2018-12-12 16:05:28",
+            "newsLetterId": 3,
+            "title": "EV EVOLVE 50",
+            "description": "便携式音柱系统",
+            "url": "https://www.mifanxing.com/cooperation/ev50/"
+        },
+        {
+            "id": 8,
+            "created": "2018-12-12 16:06:18",
+            "modified": "2018-12-12 16:06:21",
+            "newsLetterId": 3,
+            "title": "PreSonus StudioLive三代调音台",
+            "description": "集调音和录音功能于一身 - PreSonus推出第三代数字调音台产品StudioLive III",
+            "url": "https://www.mifanxing.com/p/1317870"
+        },
+        {
+            "id": 9,
+            "created": "2018-12-12 16:06:16",
+            "modified": "2018-12-12 16:06:23",
+            "newsLetterId": 3,
+            "title": "IXI MEGA M8音频接口",
+            "description": "针对日益庞大的专业个人工作室和直播市场",
+            "url": "https://www.mifanxing.com/p/1474321"
+        }
+        ]
+        }
+
+### 删除 [DELETE] /nlproduct/{id}
++ Description
+  + [MUST]  Authenticated
+  + [MUST] ROLE_ADMIN 
++  Response 200
