@@ -130,8 +130,8 @@
 ### 词典列表 [GET] /nlpUserDic?page[number]=1&page[size]=10
 + Parameters
      + id 
-     + title
-        + 查询示例：filter[title]=%25米饭星%25 （'%25'为'%'的转义）
+     + word
+        + 查询示例：filter[word:like]=%25米饭星%25 （'%25'为'%'的转义）
      + filter[categoryId] 词典分类id
      + sort -modified (从新到旧) | modified(从旧到新) 
      + isShow  0:不展示，1:展示； 有些词只用于分词词典，不需要展示
