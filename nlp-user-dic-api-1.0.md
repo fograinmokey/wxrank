@@ -39,24 +39,26 @@
       {
         "data": [
             {
-                "id": 13329,
-                "categoryId": 3,
-                "word": "高照光电"
-            },
-            {
                 "id": 14048,
                 "categoryId": 3,
                 "word": "高频",
                 "categories": [
                     {
                         "id": 1,
+                        "nlpUserDicId": 8213,
                         "title": "哈哈哈"
                     },
                     {
                         "id": 3,
+                        "nlpUserDicId": 14048,
                         "title": "厂家词典"
                     }
                 ]
+            },
+            {
+                "id": 13329,
+                "categoryId": 3,
+                "word": "高照光电"
             },
             {
                 "id": 13264,
