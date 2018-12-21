@@ -1094,7 +1094,7 @@
         ]
         }
         
-### 查询回复率 [GET]  /log/reversionrate/{newsLetterId}
+### 查询回复率 [GET]  /log/reversionrate/{newsLetterId}/1
 + Data
     + sendAmount (Long)  实际发送数量
     + reversionCount (Long)  回复数量
@@ -1106,12 +1106,10 @@
     + backReversion (String) -回复时间
   
     
-+ Description
-  + [MUST] authenticated
-  + [MUST] ROLE_ADMIN
 
 + Parameters
     + newsLetterId (int) Newsletter ID   
+    + successorfail (int)  1为回复  0为没有回复
     
 + Response 200 (application/json)
 
@@ -1147,6 +1145,150 @@
             "content": "22",
             "backReversion": 1545017663000,
             "emailAddress": "yangchangli0010@gmail.com"
+        }
+        ]
+        }
+        
+### 查询回复率 [GET]  /log/reversionrate/{newsLetterId}/0
++ Data
+    + sendAmount (Long)  实际发送数量
+    + reversionCount (Long)  回复数量
+    + noReversionCount (Long)  没有回复数量
+    + reversionRate (Double) 回复率率
+    + id (Long) - ID
+    + emailAddress (String) - email地址
+    + content (String) -回复内容
+    + backReversion (String) -回复时间
+  
+    
+
++ Parameters
+    + newsLetterId (int) Newsletter ID   
+    + successorfail (int)  1为回复  0为没有回复
+    
++ Response 200 (application/json)
+
+        {
+        "meta": {
+        "totalPages": 1,
+        "totalElements": 2,
+        "size": 10,
+        "number": 1,
+        "numberOfElements": 2,
+        "first": true,
+        "last": true,
+        "sort": null,
+        "sendAmount": 1140,
+        "reversionCount": 2,
+        "noReversionCount": 1138,
+        "reversionRate": "0.18%"
+        },
+        "links": {
+        "self": "/log/reversionrate/4/0?page[number]=1&page[size]=10",
+        "first": "/log/reversionrate/4/0?page[number]=1&page[size]=10",
+        "next": "/log/reversionrate/4/0?page[number]=2&page[size]=10",
+        "last": "/log/reversionrate/4/0?page[number]=114&page[size]=10"
+        },
+        "data": [
+        {
+            "id": 5220,
+            "created": "2018-12-20 10:57:28",
+            "newsletterId": 4,
+            "emailId": 166,
+            "companyId": 1,
+            "tableDiff": 1,
+            "emailAddress": "romaholidays@foxmail.com",
+            "open": 0
+        },
+        {
+            "id": 5221,
+            "created": "2018-12-20 10:57:29",
+            "newsletterId": 4,
+            "emailId": 5,
+            "companyId": 1,
+            "tableDiff": 1,
+            "emailAddress": "17085145710@163.com",
+            "open": 0
+        },
+        {
+            "id": 5222,
+            "created": "2018-12-20 10:57:29",
+            "newsletterId": 4,
+            "emailId": 79,
+            "companyId": 1,
+            "tableDiff": 1,
+            "emailAddress": "fuzhian@126.com",
+            "open": 0
+        },
+        {
+            "id": 5223,
+            "created": "2018-12-20 10:57:29",
+            "newsletterId": 4,
+            "emailId": 2,
+            "companyId": 1,
+            "tableDiff": 1,
+            "emailAddress": "yangchangli@mifanxing.com",
+            "open": 0
+        },
+        {
+            "id": 5224,
+            "created": "2018-12-20 10:57:29",
+            "newsletterId": 4,
+            "emailId": 4,
+            "companyId": 1,
+            "tableDiff": 1,
+            "emailAddress": "1223944885@qq.com",
+            "open": 0
+        },
+        {
+            "id": 5225,
+            "created": "2018-12-20 10:57:30",
+            "newsletterId": 4,
+            "emailId": 1,
+            "companyId": 1,
+            "tableDiff": 1,
+            "emailAddress": "yangchangli0010@gmail.com",
+            "open": 0
+        },
+        {
+            "id": 5226,
+            "created": "2018-12-20 10:57:34",
+            "newsletterId": 4,
+            "emailId": 197,
+            "companyId": 1,
+            "tableDiff": 1,
+            "emailAddress": "zhangburuo@foxmail.com",
+            "open": 0
+        },
+        {
+            "id": 5227,
+            "created": "2018-12-20 10:57:34",
+            "newsletterId": 4,
+            "emailId": 6,
+            "companyId": 1,
+            "tableDiff": 1,
+            "emailAddress": "yangchangli1223944885@hotmail.com",
+            "open": 0
+        },
+        {
+            "id": 5228,
+            "created": "2018-12-20 10:57:39",
+            "newsletterId": 4,
+            "emailId": 205,
+            "companyId": 1,
+            "tableDiff": 1,
+            "emailAddress": "miidywh@foxmail.com",
+            "open": 0
+        },
+        {
+            "id": 5229,
+            "created": "2018-12-20 10:57:39",
+            "newsletterId": 4,
+            "emailId": 21,
+            "companyId": 1,
+            "tableDiff": 1,
+            "emailAddress": "050100cui@163.com",
+            "open": 0
         }
         ]
         }
