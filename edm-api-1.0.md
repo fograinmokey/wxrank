@@ -1150,6 +1150,99 @@
         }
         ]
         }
+	
+### 查询根据链接查询访问 [GET]  /log/openlink/{newsLetterId}?link=link
+    例如/log/openlink/3?link=https://www.mifanxing.com/p/1538018?module=weekly
++ Data
+   
+  
+
++ Parameters
+    + newsLetterId (int) Newsletter ID   
+    + link (String) 链接
+    
++ Response 200 (application/json)
+
+        {
+        "meta": {
+        "totalPages": 2,
+        "totalElements": 14,
+        "size": 10,
+        "number": 1,
+        "numberOfElements": 10,
+        "first": true,
+        "last": false,
+        "sort": null
+        },
+        "links": {
+        "self": "/log/openrate/3?link=https://www.mifanxing.com/p/1538018?module=weekly&page[number]=1&page[size]=10",
+        "first": "/log/openrate/3?link=https://www.mifanxing.com/p/1538018?module=weekly&page[number]=1&page[size]=10",
+        "next": "/log/openrate/3?link=https://www.mifanxing.com/p/1538018?module=weekly&page[number]=2&page[size]=10",
+        "last": "/log/openrate/3?link=https://www.mifanxing.com/p/1538018?module=weekly&page[number]=2&page[size]=10"
+        },
+        "data": [
+        {
+            "id": 723,
+            "created": "2018-12-12 17:01:04",
+            "emailId": 84,
+            "newsletterId": 3,
+            "link": "https://www.mifanxing.com/p/1538018?module=weekly",
+            "module": "weekly",
+            "tableDiff": 1,
+            "emailAddress": "850770722@qq.com"
+        },
+        {
+            "id": 728,
+            "created": "2018-12-12 17:02:35",
+            "emailId": 471,
+            "newsletterId": 3,
+            "link": "https://www.mifanxing.com/p/1538018?module=weekly",
+            "module": "weekly",
+            "tableDiff": 1,
+            "emailAddress": "kai.liu@budee.cn"
+        },
+        {
+            "id": 729,
+            "created": "2018-12-12 17:02:35",
+            "emailId": 471,
+            "newsletterId": 3,
+            "link": "https://www.mifanxing.com/p/1538018?module=weekly",
+            "module": "weekly",
+            "tableDiff": 1,
+            "emailAddress": "kai.liu@budee.cn"
+        },
+        {
+            "id": 811,
+            "created": "2018-12-13 09:33:23",
+            "emailId": 216,
+            "newsletterId": 3,
+            "link": "https://www.mifanxing.com/p/1538018?module=weekly",
+            "module": "weekly",
+            "tableDiff": 1,
+            "emailAddress": "226587458@qq.com"
+        },
+        {
+            "id": 812,
+            "created": "2018-12-13 09:45:01",
+            "emailId": 216,
+            "newsletterId": 3,
+            "link": "https://www.mifanxing.com/p/1538018?module=weekly",
+            "module": "weekly",
+            "tableDiff": 1,
+            "emailAddress": "226587458@qq.com"
+        },
+        {
+            "id": 821,
+            "created": "2018-12-13 11:12:53",
+            "emailId": 126,
+            "newsletterId": 3,
+            "link": "https://www.mifanxing.com/p/1538018?module=weekly",
+            "module": "weekly",
+            "tableDiff": 1,
+            "emailAddress": "1468747795@qq.com"
+        }
+        ]
+        }
 
 + 2018年12月17日
      + API初始化
@@ -1350,3 +1443,5 @@
   + [MUST]  Authenticated
   + [MUST] ROLE_ADMIN 
 +  Response 200
+
+
