@@ -31,7 +31,7 @@
 
 ### 联想词条列表 [GET] /nlpUserDic/show?filter[word]=searchWord
 + Parameters
-     + filter[word] = searchWord （搜索词）
+     + filter[word] = searchWord 搜索词 （必填）
      + categoryId 分类ID
      + categories 分类
 + Request (application/json)
@@ -117,7 +117,7 @@
                 "searchWord": "微信"
             }
         ]
-    }
+      }
 
 ### (分类)高频词条榜单列表 [GET] /nlpDicDetialLog/dicRank
 + Parameters
@@ -232,3 +232,49 @@
         "data": 200
       }
 
+### 类别词典列表 [GET] /nlpUserDic/dicData?filter[categoryId]=categoryId&filter[word]=b
+
++ Parameters
+     + filter[categoryId] = categoryId 词典分类id（必填）
+     + filter[word] = b 词条
++ Description 
+     + id 词条ID 
+     + word 词条名称
++ Request (application/json)
+    
+      {
+        "data": [
+            {
+                "id": 12940,
+                "word": "B&H Photo Video"
+            },
+            {
+                "id": 12942,
+                "word": "Bax-Shop"
+            },
+            {
+                "id": 13365,
+                "word": "BBSPROSOUND"
+            },
+            {
+                "id": 13167,
+                "word": "Behringer百灵达产品中心"
+            },
+            {
+                "id": 13401,
+                "word": "BIEMA"
+            },
+            {
+                "id": 13326,
+                "word": "BMB美音美"
+            },
+            {
+                "id": 13027,
+                "word": "Bose"
+            },
+            {
+                "id": 12981,
+                "word": "Budee"
+            }
+        ]
+      }
