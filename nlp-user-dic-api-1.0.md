@@ -32,6 +32,7 @@
 ### 联想词条列表 [GET] /nlpUserDic/show?filter[word]=searchWord
 + Parameters
      + filter[word] = searchWord 搜索词 （必填）
+     + filter[categoryId] = categoryId 分类Id
      + categoryId 分类ID
      + categories 分类
 + Request (application/json)
