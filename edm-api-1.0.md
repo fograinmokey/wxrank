@@ -1586,4 +1586,105 @@
   + [MUST] ROLE_ADMIN 
 +  Response 200
 
+### 查询单个邮箱访问链接统计 [GET]/email/getpageLinkbyemailaddr
++ Parameters
+    + filter[emailAddr]  (String)  邮箱账户
+    + filter[companyId]  (Int)  公司id
+    + page[number]
+    + page[size]=10
+    
++ Request (application/json)
+       
+        {
+        "meta": {
+        "totalPages": 3,
+        "totalElements": 21,
+        "size": 10,
+        "number": 2,
+        "numberOfElements": 10,
+        "first": false,
+        "last": false,
+        "sort": null
+        },
+        "links": {
+        "self": "/email/getpageLinkbyemailaddr?filter[emailAddr]=kai.liu@budee.cn&filter[companyId]=1&page[number]=2&page[size]=10",
+        "first": "/email/getpageLinkbyemailaddr?filter[emailAddr]=kai.liu@budee.cn&filter[companyId]=1&page[number]=1&page[size]=10",
+        "prev": "/email/getpageLinkbyemailaddr?filter[emailAddr]=kai.liu@budee.cn&filter[companyId]=1&page[number]=1&page[size]=10",
+        "next": "/email/getpageLinkbyemailaddr?filter[emailAddr]=kai.liu@budee.cn&filter[companyId]=1&page[number]=3&page[size]=10",
+        "last": "/email/getpageLinkbyemailaddr?filter[emailAddr]=kai.liu@budee.cn&filter[companyId]=1&page[number]=3&page[size]=10"
+        },
+        "data": [
+        {
+            "id": 943,
+            "newsletterId": 3,
+            "link": "http://www.mifanxing.com/channel/86?module=weekly",
+            "module": "weekly",
+            "visitTimes": 1
+        },
+        {
+            "id": 949,
+            "newsletterId": 3,
+            "link": "https://www.mifanxing.com/p/1317870?module=product",
+            "module": "product",
+            "visitTimes": 1
+        },
+        {
+            "id": 947,
+            "newsletterId": 3,
+            "link": "https://www.mifanxing.com/p/1535334?module=list",
+            "module": "list",
+            "visitTimes": 1
+        },
+        {
+            "id": 728,
+            "newsletterId": 3,
+            "link": "https://www.mifanxing.com/p/1538018?module=weekly",
+            "module": "weekly",
+            "visitTimes": 2
+        },
+        {
+            "id": 946,
+            "newsletterId": 3,
+            "link": "https://www.mifanxing.com/p/1538019?module=weekly",
+            "module": "weekly",
+            "visitTimes": 1
+        },
+        {
+            "id": 948,
+            "newsletterId": 3,
+            "link": "https://www.mifanxing.com/p/1538044?module=weekly",
+            "module": "weekly",
+            "visitTimes": 1
+        },
+        {
+            "id": 940,
+            "newsletterId": 3,
+            "link": "https://www.mifanxing.com/wechatrank?module=list",
+            "module": "list",
+            "visitTimes": 2
+        },
+        {
+            "id": 1189,
+            "newsletterId": 4,
+            "link": "https://www.mifanxing.com/p/1540807?module=weekly",
+            "module": "weekly",
+            "visitTimes": 3
+        },
+        {
+            "id": 1053,
+            "newsletterId": 4,
+            "link": "https://www.mifanxing.com/p/1541849?module=list",
+            "module": "list",
+            "visitTimes": 1
+        },
+        {
+            "id": 1020,
+            "newsletterId": 4,
+            "link": "https://www.mifanxing.com/p/1541968?module=weekly",
+            "module": "weekly",
+            "visitTimes": 1
+        }
+        ]
+        }
+
 
