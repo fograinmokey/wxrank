@@ -1308,7 +1308,7 @@
         {
         "meta": {
         "totalPages": 2,
-        "totalElements": 14,
+        "totalElements": 16,
         "size": 10,
         "number": 1,
         "numberOfElements": 10,
@@ -1317,10 +1317,10 @@
         "sort": null
         },
         "links": {
-        "self": "/log/openrate/3?link=https://www.mifanxing.com/p/1538018?module=weekly&page[number]=1&page[size]=10",
-        "first": "/log/openrate/3?link=https://www.mifanxing.com/p/1538018?module=weekly&page[number]=1&page[size]=10",
-        "next": "/log/openrate/3?link=https://www.mifanxing.com/p/1538018?module=weekly&page[number]=2&page[size]=10",
-        "last": "/log/openrate/3?link=https://www.mifanxing.com/p/1538018?module=weekly&page[number]=2&page[size]=10"
+        "self": "/log/openlink/3?link=https://www.mifanxing.com/p/1538018?module=weekly&page[number]=1&page[size]=10",
+        "first": "/log/openlink/3?link=https://www.mifanxing.com/p/1538018?module=weekly&page[number]=1&page[size]=10",
+        "next": "/log/openlink/3?link=https://www.mifanxing.com/p/1538018?module=weekly&page[number]=2&page[size]=10",
+        "last": "/log/openlink/3?link=https://www.mifanxing.com/p/1538018?module=weekly&page[number]=2&page[size]=10"
         },
         "data": [
         {
@@ -1331,6 +1331,7 @@
             "link": "https://www.mifanxing.com/p/1538018?module=weekly",
             "module": "weekly",
             "tableDiff": 1,
+            "visitTimes": 1,
             "emailAddress": "850770722@qq.com"
         },
         {
@@ -1341,6 +1342,7 @@
             "link": "https://www.mifanxing.com/p/1538018?module=weekly",
             "module": "weekly",
             "tableDiff": 1,
+            "visitTimes": 1,
             "emailAddress": "kai.liu@budee.cn"
         },
         {
@@ -1351,6 +1353,7 @@
             "link": "https://www.mifanxing.com/p/1538018?module=weekly",
             "module": "weekly",
             "tableDiff": 1,
+            "visitTimes": 1,
             "emailAddress": "kai.liu@budee.cn"
         },
         {
@@ -1361,6 +1364,7 @@
             "link": "https://www.mifanxing.com/p/1538018?module=weekly",
             "module": "weekly",
             "tableDiff": 1,
+            "visitTimes": 1,
             "emailAddress": "226587458@qq.com"
         },
         {
@@ -1371,6 +1375,7 @@
             "link": "https://www.mifanxing.com/p/1538018?module=weekly",
             "module": "weekly",
             "tableDiff": 1,
+            "visitTimes": 1,
             "emailAddress": "226587458@qq.com"
         },
         {
@@ -1381,7 +1386,52 @@
             "link": "https://www.mifanxing.com/p/1538018?module=weekly",
             "module": "weekly",
             "tableDiff": 1,
+            "visitTimes": 1,
             "emailAddress": "1468747795@qq.com"
+        },
+        {
+            "id": 822,
+            "created": "2018-12-13 11:23:52",
+            "emailId": 126,
+            "newsletterId": 3,
+            "link": "https://www.mifanxing.com/p/1538018?module=weekly",
+            "module": "weekly",
+            "tableDiff": 1,
+            "visitTimes": 1,
+            "emailAddress": "1468747795@qq.com"
+        },
+        {
+            "id": 826,
+            "created": "2018-12-13 15:24:15",
+            "emailId": 213,
+            "newsletterId": 3,
+            "link": "https://www.mifanxing.com/p/1538018?module=weekly",
+            "module": "weekly",
+            "tableDiff": 1,
+            "visitTimes": 1,
+            "emailAddress": "964347861@qq.com"
+        },
+        {
+            "id": 827,
+            "created": "2018-12-13 15:25:16",
+            "emailId": 213,
+            "newsletterId": 3,
+            "link": "https://www.mifanxing.com/p/1538018?module=weekly",
+            "module": "weekly",
+            "tableDiff": 1,
+            "visitTimes": 1,
+            "emailAddress": "964347861@qq.com"
+        },
+        {
+            "id": 828,
+            "created": "2018-12-13 15:35:21",
+            "emailId": 213,
+            "newsletterId": 3,
+            "link": "https://www.mifanxing.com/p/1538018?module=weekly",
+            "module": "weekly",
+            "tableDiff": 1,
+            "visitTimes": 1,
+            "emailAddress": "964347861@qq.com"
         }
         ]
         }
