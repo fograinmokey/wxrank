@@ -129,6 +129,7 @@
      + categoryTitle 词条分类名称
      + word 词条
      + description 词条描述
+     + status204为分类下无词条数据
 + Request (application/json)
 
       {
