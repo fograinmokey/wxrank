@@ -36,7 +36,7 @@
             "key": "456c1c8ae1f5223527b0478219303145"
           }
         }
-### 上传文件 (POST) [http://192.168.1.248/upload/image] 
+### 上传文件 (POST) [http://192.168.1.248/upload/image] [http://static.mifanxing.com/upload/image]
 + Request (application/form-data)
 
         {
